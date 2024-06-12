@@ -1,0 +1,16 @@
+header {
+  #headerUp {
+    display: flex;
+    justify-content: center;
+    gap: 20em;
+    #search {
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/Search.svg");
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}
