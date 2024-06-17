@@ -21,6 +21,19 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
+        <main>
+          <div id="mainDiv">
+            <div  id="collectionAd">
+              <div>
+                <h2>
+                  Luxury homeware for people who love timeless design quality
+                </h2>
+                <p>Shop the new Spring 2024 collection today</p>
+              </div>
+              <button>View collection</button>
+            </div>
+          </div>
+        </main>
       </div>
     );
   }

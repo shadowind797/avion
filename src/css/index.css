@@ -408,19 +408,126 @@ textarea {
   padding: 0.2em 0;
 }
 
+main #mainDiv {
+  display: flex;
+  justify-content: flex-end;
+  padding: 130px 80px 250px 730px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/mianBg.jpg");
+}
+main #mainDiv #collectionAd {
+  width: 530px;
+  height: 324px;
+  display: flex;
+  flex-direction: column;
+  gap: 157px;
+  background-color: #fff;
+  padding: 60px 50px;
+}
+main #mainDiv #collectionAd div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main #mainDiv #collectionAd div h2 {
+  width: 513px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
+}
+main #mainDiv #collectionAd div p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+main #mainDiv #collectionAd button {
+  display: flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  width: 175px;
+  background-color: #F9F9F9;
+  border: none;
+}
+
+header {
+  width: 100%;
+}
+header #searchInput {
+  position: absolute;
+  width: 504px;
+  left: 28px;
+  top: 20px;
+}
+header #searchInput input {
+  width: 308px;
+  height: 44px;
+  color: white;
+  background-color: #000;
+  opacity: 0.2;
+}
+header #searchInput #searchBtn {
+  width: 112px;
+  height: 50px;
+  color: #fff;
+  background: #1e193e;
+  border: none;
+}
+header #searchInput #closeSearch {
+  width: 84px;
+  height: 50px;
+  background-image: url("../img/close.svg");
+  background-color: #8c9595;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
 header #headerUp {
   display: flex;
   justify-content: center;
-  gap: 20em;
+  gap: 46%;
+  padding: 26px 0;
+  margin: 0 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 header #headerUp #search {
   width: 16px;
   height: 16px;
   background-image: url("../img/Search.svg");
+  cursor: pointer;
 }
 header #headerUp h1 {
+  color: #22202e;
   font-size: 24px;
   font-weight: 400;
+}
+header #headerUp #options {
+  display: flex;
+  gap: 16px;
+}
+header #headerUp #options #cart {
+  background-image: url("../img/Shopping-cart.svg");
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+header #headerUp #options #profile {
+  background-image: url("../img/User-avatar.svg");
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+header #headerDown {
+  padding: 20px 0;
+}
+header #headerDown nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+}
+header #headerDown nav ul li {
+  color: #726e8d;
 }
 
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -431,6 +538,6 @@ body p, body li {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: auto;
 }/*# sourceMappingURL=index.css.map */

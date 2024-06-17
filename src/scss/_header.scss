@@ -1,16 +1,80 @@
 header {
+  width: 100%;
+  #searchInput {
+    position: absolute;
+    width: 504px;
+    left: 28px;
+    top: 20px;
+    input {
+      width: 308px;
+      height: 44px;
+      color: white;
+      background-color: #000;
+      opacity: .2;
+    }
+    #searchBtn {
+      width: 112px;
+      height: 50px;
+      color: #fff;
+      background: #1e193e;
+      border: none;
+    }
+    #closeSearch {
+      width: 84px;
+      height: 50px;
+      background-image: url("../img/close.svg");
+      background-color: #8c9595;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+    }
+  }
   #headerUp {
     display: flex;
     justify-content: center;
-    gap: 20em;
+    gap: 46%;
+    padding: 26px 0;
+    margin: 0 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     #search {
       width: 16px;
       height: 16px;
       background-image: url("../img/Search.svg");
+      cursor: pointer;
     }
     h1 {
+      color: #22202e;
       font-size: 24px;
       font-weight: 400;
+    }
+    #options {
+      display: flex;
+      gap: 16px;
+      #cart {
+        background-image: url("../img/Shopping-cart.svg");
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+      #profile {
+        background-image: url("../img/User-avatar.svg");
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+  #headerDown {
+    padding: 20px 0;
+    nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 44px;
+        li {
+          color: #726e8d;
+        }
+      }
     }
   }
 }
