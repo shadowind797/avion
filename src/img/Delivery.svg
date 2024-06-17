@@ -1,6 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Delivery">
-<rect width="24" height="24" fill="white" style="mix-blend-mode:multiply"/>
+<rect width="24" height="24" fill="none" style="mix-blend-mode:multiply"/>
 <g id="Vector">
 <path d="M12 12H3V13.5H12V12Z" fill="#2A254B"/>
 <path d="M9 8.25H1.5V9.75H9V8.25Z" fill="#2A254B"/>

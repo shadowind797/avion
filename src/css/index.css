@@ -411,7 +411,7 @@ textarea {
 main #mainDiv {
   display: flex;
   justify-content: flex-end;
-  padding: 130px 80px 250px 730px;
+  padding: 280px 120px 110px 730px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/mianBg.jpg");
@@ -447,8 +447,52 @@ main #mainDiv #collectionAd button {
   align-items: flex-start;
   gap: 10px;
   width: 175px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+main #plusesOfBrand {
+  padding-top: 80px;
+  padding-bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+}
+main #plusesOfBrand h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+main #plusesOfBrand #plusBoxes {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+main #plusesOfBrand #plusBoxes .box {
+  width: 209px;
+  text-align: left;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px;
+}
+main #plusesOfBrand #plusBoxes .box img {
+  height: 24px;
+  width: 24px;
+}
+main #plusesOfBrand #plusBoxes .box h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+main #plusesOfBrand #plusBoxes .box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 header {
@@ -530,10 +574,13 @@ header #headerDown nav ul li {
   color: #726e8d;
 }
 
+body {
+  color: #2A254B;
+}
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: ClashDisplay-Regular;
 }
-body p, body li {
+body p, body li, body button {
   font-family: Satoshi-Regular;
 }
 

@@ -6,10 +6,11 @@
 @import url('satoshi.css');
 
 body {
+    color: #2A254B;
     h1, h2, h3, h4, h5, h6 {
         font-family: ClashDisplay-Regular;
     }
-    p, li {
+    p, li, button {
         font-family: Satoshi-Regular;
     }
 }
