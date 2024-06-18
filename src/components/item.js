@@ -1,22 +1,19 @@
 import React from "react";
-import { IoCloseCircleSharp, IoHammerSharp } from "react-icons/io5";
 
-class User extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  item = this.props.item;
+class Item extends React.Component {
   render() {
+    const { img, name, cost } = this.props.item;
+    const imgPath = process.env.PUBLIC_URL + img;
     return (
       <div className="item">
-        <img src={this.item.img} />
+        <img src={imgPath} />
         <h2>
-          {this.item.name}
+          {name}
         </h2>
-        <p>£{this.item.cost}</p>
+        <p>£{cost}</p>
       </div>
     );
   }
 }
 
-export default User;
+export default Item;

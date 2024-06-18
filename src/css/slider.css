@@ -1,5 +1,11 @@
-.slider_style {
-  position: relative;
+.slider__item-content div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider__item-content div div {
+  display: block;
 }
 
 .slider__container {

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
-import Items from "../components/items";
+import Item from "../components/item";
 import jsonItems from "../json/items.json";
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
@@ -19,7 +19,7 @@ class Home extends React.Component {
       const slider = new Slider($slider, {
         loop: true,
         autoplay: true,
-        interval: 5000,
+        interval: 20000, //ms
         pauseOnHover: true,
         refresh: true,
         swipe: true,
@@ -27,6 +27,7 @@ class Home extends React.Component {
     }
   }
   render() {
+    const firstFourItems = jsonItems.slice(0, 4);
     return (
       <div>
         <Header />
@@ -89,8 +90,12 @@ class Home extends React.Component {
                 <div className="slider__items">
                   <div className="slider__item">
                     <div className="slider__item-container">
-                      <div className="slider__item-content ">
-                        
+                      <div className="slider__item-content">
+                        <div>
+                          {firstFourItems.map((item) => (
+                            <div key={item.id}><Item item={item}/></div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

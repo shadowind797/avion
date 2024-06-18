@@ -2,25 +2,29 @@
   {
     "id": 1,
     "name": "The Dandy chair",
-    "img": "",
-    "cost": 250
+    "img": "./img/Photo1.png",
+    "cost": 250,
+    "collection": ""
   },
   {
     "id": 2,
     "name": "Rustic Vase Set",
-    "img": "",
-    "cost": 155
+    "img": "./img/Photo2.png",
+    "cost": 155,
+    "collection": ""
   },
   {
     "id": 3,
     "name": "The Silky Vase",
-    "img": "",
-    "cost": 125
+    "img": "./img/Photo3.png",
+    "cost": 125,
+    "collection": ""
   },
   {
     "id": 4,
     "name": "The Lucy Lamp",
-    "img": "",
-    "cost": 399
+    "img": "./img/Photo4.png",
+    "cost": 399,
+    "collection": ""
   }
 ]
