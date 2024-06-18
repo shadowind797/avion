@@ -616,6 +616,7 @@ main #clubJoin #email input {
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
+  color: #F9F9F9;
 }
 main #clubJoin #email button {
   display: flex;
@@ -712,7 +713,7 @@ body {
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: ClashDisplay-Regular;
 }
-body p, body li, body button {
+body p, body li, body button, body input {
   font-family: Satoshi-Regular;
 }
 

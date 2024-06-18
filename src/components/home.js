@@ -8,7 +8,7 @@ import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
 import recycle from "../img/Sprout.svg";
-import tick from "../img/Checkmark-filled.svg"
+import tick from "../img/Checkmark-filled.svg";
 import sartedColection from "../img/ImageBlock.png";
 
 class Home extends React.Component {
@@ -175,6 +175,7 @@ class Home extends React.Component {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
