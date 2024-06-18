@@ -8,6 +8,8 @@ import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
 import recycle from "../img/Sprout.svg";
+import tick from "../img/Checkmark-filled.svg"
+import sartedColection from "../img/ImageBlock.png";
 
 class Home extends React.Component {
   constructor(props) {
@@ -126,6 +128,50 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div id="started">
+            <div id="info">
+              <div>
+                <h2>It started with a small idea</h2>
+                <p>
+                  A global brand with local beginnings, our story begain in a
+                  small studio in South London in early 2014
+                </p>
+              </div>
+              <button>View collection</button>
+            </div>
+            <div id="img">
+              <img src={sartedColection}></img>
+            </div>
+          </div>
+          <div id="clubJoin">
+            <div id="clubInfo">
+              <div id="clubText">
+                <h2>Join the club and get the benefits</h2>
+                <p>
+                  Sign up for our newsletter and receive exclusive offers on new
+                  ranges, sales, pop up stores and more
+                </p>
+              </div>
+              <div id="benefits">
+                <div>
+                  <img src={tick}></img>
+                  <p>Exclusive offers</p>
+                </div>
+                <div>
+                  <img src={tick}></img>
+                  <p>Free events</p>
+                </div>
+                <div>
+                  <img src={tick}></img>
+                  <p>Large discounts</p>
+                </div>
+              </div>
+            </div>
+            <div id="email">
+              <input placeholder="example@gmail.com"></input>
+              <button>Sign Up</button>
             </div>
           </div>
         </main>
