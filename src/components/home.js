@@ -2,18 +2,23 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
+import Items from "../components/items";
+import jsonItems from "../json/items.json";
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
 import recycle from "../img/Sprout.svg";
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     const $slider = document.getElementById("slider");
     if ($slider) {
       const slider = new Slider($slider, {
         loop: true,
-        autoplay: false,
+        autoplay: true,
         interval: 5000,
         pauseOnHover: true,
         refresh: true,
@@ -58,7 +63,7 @@ class Home extends React.Component {
                 <img src={purschase}></img>
                 <h3>Unbeatable prices</h3>
                 <p>
-                  For our materials and quality you won’t find better prices
+                  For our materials and quality you won't find better prices
                   anywhere
                 </p>
               </div>
@@ -69,6 +74,27 @@ class Home extends React.Component {
                   We use 100% recycled to ensure our footprint is more
                   manageable
                 </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="slider_style"
+            data-slider="chiefslider"
+            data-infinite="false"
+            data-autoplay="false"
+            id="slider"
+          >
+            <div className="slider__container">
+              <div className="slider__wrapper">
+                <div className="slider__items">
+                  <div className="slider__item">
+                    <div className="slider__item-container">
+                      <div className="slider__item-content ">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

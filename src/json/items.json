@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "The Dandy chair",
+    "img": "",
+    "cost": 250
+  },
+  {
+    "id": 2,
+    "name": "Rustic Vase Set",
+    "img": "",
+    "cost": 155
+  },
+  {
+    "id": 3,
+    "name": "The Silky Vase",
+    "img": "",
+    "cost": 125
+  },
+  {
+    "id": 4,
+    "name": "The Lucy Lamp",
+    "img": "",
+    "cost": 399
+  }
+]
