@@ -93,9 +93,34 @@ class Home extends React.Component {
                       <div className="slider__item-content">
                         <div>
                           {firstFourItems.map((item) => (
-                            <div key={item.id}><Item item={item}/></div>
+                            <Item item={item} />
                           ))}
                         </div>
+                        <button>View collection</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="slider__item">
+                    <div className="slider__item-container">
+                      <div className="slider__item-content">
+                        <div>
+                          {firstFourItems.map((item) => (
+                            <Item item={item} />
+                          ))}
+                        </div>
+                        <button>View collection</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="slider__item">
+                    <div className="slider__item-container">
+                      <div className="slider__item-content">
+                        <div>
+                          {firstFourItems.map((item) => (
+                            <Item item={item} />
+                          ))}
+                        </div>
+                        <button>View collection</button>
                       </div>
                     </div>
                   </div>

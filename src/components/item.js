@@ -7,10 +7,10 @@ class Item extends React.Component {
     return (
       <div className="item">
         <img src={imgPath} />
-        <h2>
-          {name}
-        </h2>
-        <p>£{cost}</p>
+        <div>
+          <h2>{name}</h2>
+          <p>£{cost}</p>
+        </div>
       </div>
     );
   }

@@ -494,6 +494,30 @@ main #plusesOfBrand #plusBoxes .box p {
   font-weight: 400;
   line-height: 150%;
 }
+main .item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+}
+main .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main .slider__item-content {
+  text-align: center;
+}
+main .slider__item-content button {
+  padding: 16px 32px;
+  width: 175px;
+  background-color: #f9f9f9;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
 
 header {
   width: 100%;

@@ -4,10 +4,6 @@
   gap: 20px;
 }
 
-.slider__item-content div div {
-  display: block;
-}
-
 .slider__container {
   overflow: hidden;
 }

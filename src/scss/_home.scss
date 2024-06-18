@@ -85,4 +85,28 @@ main {
       }
     }
   }
+  .item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 50px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .slider__item-content {
+    text-align: center;
+    button {
+      padding: 16px 32px;
+      width: 175px;
+      background-color: #f9f9f9;
+      border: none;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }
