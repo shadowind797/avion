@@ -408,7 +408,7 @@ textarea {
   padding: 0.2em 0;
 }
 
-main #mainDiv {
+#home main #mainDiv {
   display: flex;
   justify-content: flex-end;
   padding: 280px 120px 110px 730px;
@@ -416,7 +416,7 @@ main #mainDiv {
   background-size: cover;
   background-image: url("../img/mianBg.jpg");
 }
-main #mainDiv #collectionAd {
+#home main #mainDiv #collectionAd {
   width: 530px;
   height: 324px;
   display: flex;
@@ -425,23 +425,23 @@ main #mainDiv #collectionAd {
   background-color: #fff;
   padding: 60px 50px;
 }
-main #mainDiv #collectionAd div {
+#home main #mainDiv #collectionAd div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main #mainDiv #collectionAd div h2 {
+#home main #mainDiv #collectionAd div h2 {
   width: 513px;
   font-size: 32px;
   font-weight: 400;
   line-height: 140%;
 }
-main #mainDiv #collectionAd div p {
+#home main #mainDiv #collectionAd div p {
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
 }
-main #mainDiv #collectionAd button {
+#home main #mainDiv #collectionAd button {
   display: flex;
   padding: 16px 32px;
   align-items: flex-start;
@@ -453,7 +453,7 @@ main #mainDiv #collectionAd button {
   font-weight: 400;
   line-height: 150%;
 }
-main #plusesOfBrand {
+#home main #plusesOfBrand {
   padding-top: 80px;
   padding-bottom: 82px;
   display: flex;
@@ -461,17 +461,17 @@ main #plusesOfBrand {
   gap: 36px;
   text-align: center;
 }
-main #plusesOfBrand h2 {
+#home main #plusesOfBrand h2 {
   font-size: 24px;
   font-weight: 400;
   line-height: 140%;
 }
-main #plusesOfBrand #plusBoxes {
+#home main #plusesOfBrand #plusBoxes {
   display: flex;
   justify-content: center;
   gap: 22px;
 }
-main #plusesOfBrand #plusBoxes .box {
+#home main #plusesOfBrand #plusBoxes .box {
   width: 209px;
   text-align: left;
   background-color: #f9f9f9;
@@ -480,36 +480,36 @@ main #plusesOfBrand #plusBoxes .box {
   gap: 12px;
   padding: 48px;
 }
-main #plusesOfBrand #plusBoxes .box img {
+#home main #plusesOfBrand #plusBoxes .box img {
   height: 24px;
   width: 24px;
 }
-main #plusesOfBrand #plusBoxes .box h3 {
+#home main #plusesOfBrand #plusBoxes .box h3 {
   font-size: 20px;
   font-weight: 400;
   line-height: 140%;
 }
-main #plusesOfBrand #plusBoxes .box p {
+#home main #plusesOfBrand #plusBoxes .box p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
-main .slider__item-content {
+#home main .slider__item-content {
   text-align: center;
 }
-main .slider__item-content .item {
+#home main .slider__item-content .item {
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding-bottom: 50px;
 }
-main .slider__item-content .item div {
+#home main .slider__item-content .item div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-main .slider__item-content button {
+#home main .slider__item-content button {
   padding: 16px 32px;
   width: 175px;
   background-color: #f9f9f9;
@@ -519,14 +519,14 @@ main .slider__item-content button {
   line-height: 150%;
   margin-bottom: 40px;
 }
-main #started {
+#home main #started {
   margin: 60px 0;
   display: flex;
   gap: 16px;
   color: #fff;
   justify-content: center;
 }
-main #started #info {
+#home main #started #info {
   display: flex;
   padding: 64px 75px 54px 64px;
   flex-direction: column;
@@ -536,15 +536,15 @@ main #started #info {
   background-color: #2a254b;
   max-width: 495px;
 }
-main #started #info h2 {
+#home main #started #info h2 {
   font-size: 32px;
   font-weight: 400;
 }
-main #started #info p {
+#home main #started #info p {
   font-size: 18px;
   font-weight: 400;
 }
-main #started #info button {
+#home main #started #info button {
   padding: 16px 32px;
   width: 175px;
   color: #fff;
@@ -554,13 +554,13 @@ main #started #info button {
   font-weight: 400;
   line-height: 150%;
 }
-main #started #info div {
+#home main #started #info div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
 }
-main #clubJoin {
+#home main #clubJoin {
   color: #fff;
   padding: 97px 473px 86px 473px;
   display: flex;
@@ -572,7 +572,7 @@ main #clubJoin {
   background-size: cover;
   align-items: center;
 }
-main #clubJoin #clubInfo {
+#home main #clubJoin #clubInfo {
   width: 494px;
   text-align: center;
   display: flex;
@@ -580,52 +580,94 @@ main #clubJoin #clubInfo {
   justify-content: center;
   gap: 30px;
 }
-main #clubJoin #clubInfo #clubText {
+#home main #clubJoin #clubInfo #clubText {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-main #clubJoin #clubInfo #clubText h2 {
+#home main #clubJoin #clubInfo #clubText h2 {
   font-size: 32px;
   font-weight: 400;
   line-height: 140%;
 }
-main #clubJoin #clubInfo #clubText p {
+#home main #clubJoin #clubInfo #clubText p {
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
 }
-main #clubJoin #clubInfo #benefits {
+#home main #clubJoin #clubInfo #benefits {
   display: flex;
   justify-content: center;
   gap: 36px;
 }
-main #clubJoin #clubInfo #benefits div {
+#home main #clubJoin #clubInfo #benefits div {
   display: flex;
   gap: 8px;
 }
-main #clubJoin #clubInfo #benefits div img {
+#home main #clubJoin #clubInfo #benefits div img {
   width: 16px;
 }
-main #clubJoin #email {
+#home main #clubJoin #email {
   display: flex;
 }
-main #clubJoin #email input {
+#home main #clubJoin #email input {
   display: flex;
   padding: 17px 205px 17px 32px;
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  color: #F9F9F9;
+  color: #f9f9f9;
 }
-main #clubJoin #email button {
+#home main #clubJoin #email button {
   display: flex;
   padding: 16px 32px;
   align-items: flex-start;
   gap: 10px;
-  background-color: #2A254B;
+  background-color: #2a254b;
   color: #fff;
   border: none;
+}
+
+#about main #plusesOfBrand {
+  padding-top: 80px;
+  padding-bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+}
+#about main #plusesOfBrand h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#about main #plusesOfBrand #plusBoxes {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+#about main #plusesOfBrand #plusBoxes .box {
+  width: 209px;
+  text-align: left;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px;
+}
+#about main #plusesOfBrand #plusBoxes .box img {
+  height: 24px;
+  width: 24px;
+}
+#about main #plusesOfBrand #plusBoxes .box h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#about main #plusesOfBrand #plusBoxes .box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 header {
@@ -634,8 +676,8 @@ header {
 header #searchInput {
   position: absolute;
   width: 504px;
-  left: 28px;
-  top: 20px;
+  right: 23px;
+  top: 68px;
 }
 header #searchInput input {
   width: 308px;
@@ -662,10 +704,10 @@ header #searchInput #closeSearch {
 }
 header #headerUp {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 46%;
-  padding: 26px 0;
-  margin: 0 28px;
+  padding: 20px 0;
+  margin: 0 22px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 header #headerUp #search {
@@ -679,17 +721,26 @@ header #headerUp h1 {
   font-size: 24px;
   font-weight: 400;
 }
-header #headerUp #options {
+header #headerUp #upheaderbtns {
+  margin-left: auto;
+  display: flex;
+  gap: 47px;
+}
+header #headerUp #upheaderbtns #headerLinks ul {
+  display: flex;
+  gap: 32px;
+}
+header #headerUp #upheaderbtns #options {
   display: flex;
   gap: 16px;
 }
-header #headerUp #options #cart {
+header #headerUp #upheaderbtns #options #cart {
   background-image: url("../img/Shopping-cart.svg");
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-header #headerUp #options #profile {
+header #headerUp #upheaderbtns #options #profile {
   background-image: url("../img/User-avatar.svg");
   width: 16px;
   height: 16px;

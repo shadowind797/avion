@@ -12,39 +12,32 @@ class Header extends React.Component {
     return (
       <header>
         <div id="headerUp">
-          <div
-            id="search"
-            typeof="submit"
-            onClick={() => {
-              this.setState({ searchShow: true });
-            }}
-            style={
-              this.state.searchShow === false ? { opacity: 1 } : { opacity: 0 }
-            }
-          ></div>
-          <div
-            id="searchInput"
-            style={
-              this.state.searchShow === false
-                ? { display: "none" }
-                : { display: "flex" }
-            }
-          >
-            <input placeholder="Input furniture name or type"></input>
-            <button id="searchBtn">Search</button>
-            <button
-              id="closeSearch"
-              onClick={() => {
-                this.setState({ searchShow: false });
-              }}
-            ></button>
-          </div>
           <Link to="/">
             <h1>Avion</h1>
           </Link>
-          <div id="options">
-            <div id="cart"></div>
-            <div id="profile"></div>
+          <div id="upheaderbtns">
+            <div id="headerLinks">
+              <ul>
+                <Link to="/about">
+                  <li>About Us</li>
+                </Link>
+                <li>Contact</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div id="options">
+              <div
+                id="search"
+                typeof="submit"
+                onClick={() =>
+                  this.setState((prevState) => ({
+                    searchShow: !prevState.searchShow,
+                  }))
+                }
+              ></div>
+              <div id="cart"></div>
+              <div id="profile"></div>
+            </div>
           </div>
         </div>
         <div id="headerDown">
@@ -59,6 +52,23 @@ class Header extends React.Component {
               <li>Cutlery</li>
             </ul>
           </nav>
+          <div
+            id="searchInput"
+            style={
+              this.state.searchShow === false
+                ? { display: "none" }
+                : { display: "flex" }
+            }
+          >
+            <button
+              id="closeSearch"
+              onClick={() => {
+                this.setState({ searchShow: false });
+              }}
+            ></button>
+            <button id="searchBtn">Search</button>
+            <input placeholder="Input furniture name or type"></input>
+          </div>
         </div>
       </header>
     );

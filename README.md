@@ -1,3 +1,3 @@
 # Avion Project
 
-## Design from https://verstaem.online/ ©
+## Design idea from https://verstaem.online/ ©

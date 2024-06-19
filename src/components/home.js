@@ -31,7 +31,7 @@ class Home extends React.Component {
   render() {
     const firstFourItems = jsonItems.slice(0, 4);
     return (
-      <div>
+      <div id="home">
         <Header />
         <main>
           <div id="mainDiv">
