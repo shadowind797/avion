@@ -1,0 +1,30 @@
+#store {
+  main {
+    #storeTitle {
+      color: #fff;
+      padding: 123px 1154px 36px 80px;
+      background-image: url("../img/storeTitleBg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 140%;
+      }
+    }
+    #storeHead {
+        display: flex;
+        padding: 15px 25px;
+        justify-content: flex-start;
+        a {
+            padding-top: 5px;
+        }
+        #nav {
+            margin-left: auto;
+            p {
+                padding-top: 5px;
+            }
+        }
+    }
+  }
+}

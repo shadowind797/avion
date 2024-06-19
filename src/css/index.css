@@ -1,9 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0-modified | 20110126
-   License: none (public domain)
-*/
 @import url("clash-display.css");
 @import url("satoshi.css");
+@import url("bootstrap.css");
 html,
 body,
 div,
@@ -765,6 +762,33 @@ textarea {
   line-height: 150%;
 }
 
+#store main #storeTitle {
+  color: #fff;
+  padding: 123px 1154px 36px 80px;
+  background-image: url("../img/storeTitleBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#store main #storeTitle h1 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#store main #storeHead {
+  display: flex;
+  padding: 15px 25px;
+  justify-content: flex-start;
+}
+#store main #storeHead a {
+  padding-top: 5px;
+}
+#store main #storeHead #nav {
+  margin-left: auto;
+}
+#store main #storeHead #nav p {
+  padding-top: 5px;
+}
+
 header {
   width: 100%;
 }
@@ -955,6 +979,7 @@ body h6 {
   font-family: ClashDisplay-Regular;
 }
 body p,
+body a,
 body li,
 body button,
 body input {

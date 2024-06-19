@@ -21,7 +21,7 @@ class Home extends React.Component {
       const slider = new Slider($slider, {
         loop: true,
         autoplay: true,
-        interval: 20000, //ms
+        interval: 10000, //ms
         pauseOnHover: true,
         refresh: true,
         swipe: true,

@@ -6,6 +6,7 @@
 @import "footer.scss";
 @import url("clash-display.css");
 @import url("satoshi.css");
+@import url("bootstrap.css");
 
 a {
   text-decoration: none;
@@ -23,6 +24,7 @@ body {
     font-family: ClashDisplay-Regular;
   }
   p,
+  a,
   li,
   button,
   input {
