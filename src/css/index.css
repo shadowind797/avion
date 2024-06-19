@@ -792,13 +792,26 @@ footer #footerDown #socials {
   gap: 24px;
 }
 
-body {
-  color: #2A254B;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+
+body {
+  color: #2a254b;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   font-family: ClashDisplay-Regular;
 }
-body p, body li, body button, body input {
+body p,
+body li,
+body button,
+body input {
   font-family: Satoshi-Regular;
 }
 

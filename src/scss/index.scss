@@ -2,20 +2,33 @@
 @import "home.scss";
 @import "header.scss";
 @import "footer.scss";
-@import url('clash-display.css');
-@import url('satoshi.css');
+@import url("clash-display.css");
+@import url("satoshi.css");
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 body {
-    color: #2A254B;
-    h1, h2, h3, h4, h5, h6 {
-        font-family: ClashDisplay-Regular;
-    }
-    p, li, button, input {
-        font-family: Satoshi-Regular;
-    }
+  color: #2a254b;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: ClashDisplay-Regular;
+  }
+  p,
+  li,
+  button,
+  input {
+    font-family: Satoshi-Regular;
+  }
 }
 
 .container {
-    max-width: 1440px;
-    margin: auto;
+  max-width: 1440px;
+  margin: auto;
 }
