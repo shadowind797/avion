@@ -707,6 +707,91 @@ header #headerDown nav ul li {
   color: #726e8d;
 }
 
+footer {
+  color: #fff;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+footer #footerUp {
+  padding: 60px 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+footer #footerUp #links {
+  display: flex;
+  gap: 120px;
+  padding-right: 110px;
+}
+footer #footerUp #links div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer #footerUp #links div h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+footer #footerUp #links div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer #footerUp #links div ul li {
+  font-size: 14px;
+  font-weight: 400;
+}
+footer #footerUp #joinMail {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer #footerUp #joinMail h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+footer #footerUp #joinMail div {
+  display: flex;
+}
+footer #footerUp #joinMail div input {
+  padding: 17px 360px 17px 32px;
+  flex: 1 0 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+footer #footerUp #joinMail div button {
+  display: flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #fff;
+  color: #2a254b;
+  border: none;
+}
+footer #footerDown {
+  border-top: #4e4d93 1px solid;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+footer #footerDown #copy {
+  padding-right: 849px;
+}
+footer #footerDown #copy p {
+  font-size: 14px;
+  font-weight: 400;
+}
+footer #footerDown #socials {
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+}
+
 body {
   color: #2A254B;
 }

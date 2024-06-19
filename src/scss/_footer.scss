@@ -1,0 +1,84 @@
+footer {
+  color: #fff;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  #footerUp {
+    padding: 60px 80px;
+    display: flex;
+    justify-content: flex-start;
+    #links {
+      display: flex;
+      gap: 120px;
+      padding-right: 110px;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        h3 {
+          font-size: 16px;
+          font-weight: 400;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          li {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    #joinMail {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      div {
+        display: flex;
+        input {
+          padding: 17px 360px 17px 32px;
+          flex: 1 0 0;
+          background-color: rgba(255, 255, 255, 0.15);
+          border: none;
+          font-size: 16px;
+          font-weight: 400;
+          color: #fff;
+        }
+        button {
+          display: flex;
+          padding: 16px 32px;
+          align-items: flex-start;
+          gap: 10px;
+          background-color: #fff;
+          color: #2a254b;
+          border: none;
+        }
+      }
+    }
+  }
+  #footerDown {
+    border-top: #4e4d93 1px solid;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: flex-start;
+    #copy {
+      padding-right: 849px;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    #socials {
+      margin-left: auto;
+      display: flex;
+      gap: 24px;
+    }
+  }
+}
