@@ -5,6 +5,8 @@ import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
 import recycle from "../img/Sprout.svg";
+import about1 from "../img/about1.png";
+import about2 from "../img/about2.png";
 
 class About extends React.Component {
   render() {
@@ -18,9 +20,58 @@ class About extends React.Component {
               customer service
             </h1>
           </div>
-          <div id="aboutPar1"></div>
-          <div id="aboutPar2"></div>
-          <div id="delivery"></div>
+          <div id="aboutPar1" className="container">
+            <div id="aboutPar1Text">
+              <div id="aboutInfo1">
+                <h2>
+                  From a studio in London to a global brand with over 400
+                  outlets
+                </h2>
+                <div>
+                  <p>
+                    When we started Avion, the idea was simple. Make high
+                    quality furniture affordable and available for the mass
+                    market.
+                  </p>
+                  <p>
+                    Handmade, and lovingly crafted furniture and homeware is
+                    what we live, breathe and design so our Chelsea boutique
+                    become the hotbed for the London interior design community.
+                  </p>
+                </div>
+              </div>
+              <button>Get in touch</button>
+            </div>
+            <div id="aboutImg1">
+              <img src={about1}></img>
+            </div>
+          </div>
+          <div id="aboutPar2" className="container">
+            <div id="aboutImg2">
+              <img src={about2}></img>
+            </div>
+            <div id="aboutPar2Text">
+              <div id="aboutInfo2">
+                <h2>
+                  Our service isn't just personal, it's actually hyper
+                  personally exquisite
+                </h2>
+                <div>
+                  <p>
+                    When we started Avion, the idea was simple. Make high
+                    quality furniture affordable and available for the mass
+                    market.
+                  </p>
+                  <p>
+                    Handmade, and lovingly crafted furniture and homeware is
+                    what we live, breathe and design so our Chelsea boutique
+                    become the hotbed for the London interior design community.
+                  </p>
+                </div>
+              </div>
+              <button>Get in touch</button>
+            </div>
+          </div>
           <div id="plusesOfBrand">
             <h2>What makes our brand different</h2>
             <div id="plusBoxes">

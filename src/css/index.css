@@ -628,6 +628,101 @@ textarea {
   border: none;
 }
 
+#about main #aboutHeader {
+  text-align: center;
+  padding: 67px 0 79px 0;
+  width: 704px;
+  margin: auto;
+}
+#about main #aboutHeader h1 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#about main #aboutPar1 {
+  display: flex;
+  justify-content: flex-start;
+}
+#about main #aboutPar1 #aboutPar1Text {
+  padding: 72px 100px 54px 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 196px;
+}
+#about main #aboutPar1 #aboutPar1Text #aboutInfo1 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#about main #aboutPar1 #aboutPar1Text #aboutInfo1 h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#about main #aboutPar1 #aboutPar1Text #aboutInfo1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#about main #aboutPar1 #aboutPar1Text #aboutInfo1 div p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#about main #aboutPar1 #aboutImg1 {
+  margin-left: auto;
+}
+#about main #aboutPar1 button {
+  padding: 16px 32px;
+  gap: 10px;
+  width: 175px;
+  background-color: #f9f9f9;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#about main #aboutPar2 {
+  display: flex;
+  justify-content: flex-start;
+}
+#about main #aboutPar2 #aboutPar2Text {
+  padding: 72px 100px 54px 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 196px;
+}
+#about main #aboutPar2 #aboutPar2Text #aboutInfo2 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#about main #aboutPar2 #aboutPar2Text #aboutInfo2 h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#about main #aboutPar2 #aboutPar2Text #aboutInfo2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#about main #aboutPar2 #aboutPar2Text #aboutInfo2 div p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#about main #aboutPar2 #aboutImg2 {
+  margin-right: auto;
+}
+#about main #aboutPar2 button {
+  padding: 16px 32px;
+  gap: 10px;
+  width: 175px;
+  background-color: #f9f9f9;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
 #about main #plusesOfBrand {
   padding-top: 80px;
   padding-bottom: 82px;
