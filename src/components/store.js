@@ -1,10 +1,16 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import Dropdown from "../hooks/dropdown.tsx"
-import dropdownData from "../json/dropdown.json"
+import Dropdown from "../hooks/dropdown.tsx";
+import dropdownData from "../json/dropdown.json";
 
 class Store extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sortShow: false,
+    };
+  }
   render() {
     return (
       <div id="store">
@@ -16,13 +22,21 @@ class Store extends React.Component {
           <div id="storeHead">
             <a>Filters</a>
             <div id="nav">
-              <Dropdown
-                id=""
-                title=""
-                data={dropdownData}
-                selectedId="1"
-                onSelect={() => {}}
-              />
+              <div
+                id="sort"
+                onClick={this.setState((prevState) => ({
+                  sortShow: !prevState.sortShow,
+                }))}
+              >
+                <Dropdown
+                  id=""
+                  title=""
+                  // show={this.state.sortShow}
+                  data={dropdownData}
+                  selectedId="1"
+                  onSelect={() => {}}
+                />
+              </div>
             </div>
           </div>
         </main>

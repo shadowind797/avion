@@ -1,13 +1,11 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import classNames from "classnames";
-import { GoChevronDown } from "react-icons/go";
 import useOutsideClick from "./useOutsideClick.tsx";
+import dropdown from "../img/dropdown.svg"
 
 interface DropdownItem {
   id: string;
   name: string;
-  imageUrl?: string;
 }
 
 interface DropdownProps {
@@ -15,6 +13,7 @@ interface DropdownProps {
   title?: string;
   data: DropdownItem[];
   selectedId?: string;
+  showSort: boolean;
   onSelect?: (id: string) => void;
 }
 
@@ -23,6 +22,7 @@ const Dropdown = ({
   title = "Select",
   data,
   selectedId,
+  showSort,
   onSelect,
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -60,24 +60,16 @@ const Dropdown = ({
         aria-expanded={isOpen}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
+        className="dropdownBtn"
       >
         <span>{selectedItem?.name || title}</span>
-        <GoChevronDown
-          size={20}
-        />
+        {/* <img src={dropdown} id="dropdownIcon" style={show ? {transform: "rotate(180deg)"} : {}}></img> */}
       </button>
       {isOpen && (
         <div aria-label="Dropdown menu">
-          <ul
-            role="menu"
-            aria-labelledby={id}
-            aria-orientation="vertical"
-          >
+          <ul role="menu" aria-labelledby={id} aria-orientation="vertical">
             {data?.map((item) => (
-              <li
-                key={item.id}
-                onClick={() => handleChange(item)}
-              >
+              <li key={item.id} onClick={() => handleChange(item)}>
                 <span>{item.name}</span>
               </li>
             ))}

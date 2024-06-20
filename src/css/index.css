@@ -405,6 +405,16 @@ textarea {
   padding: 0.2em 0;
 }
 
+.dropdownBtn {
+  border: none;
+  background-color: #fff;
+  display: flex;
+  vertical-align: middle;
+}
+.dropdownBtn #dropdownIcon {
+  margin-top: 3px;
+}
+
 #home main #mainDiv {
   display: flex;
   justify-content: flex-end;
@@ -784,9 +794,6 @@ textarea {
 }
 #store main #storeHead #nav {
   margin-left: auto;
-}
-#store main #storeHead #nav p {
-  padding-top: 5px;
 }
 
 header {
