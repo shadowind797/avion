@@ -1,10 +1,8 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Header from "./header";
 import Footer from "./footer";
+import Dropdown from "../hooks/dropdown.tsx"
+import dropdownData from "../json/dropdown.json"
 
 class Store extends React.Component {
   render() {
@@ -18,34 +16,13 @@ class Store extends React.Component {
           <div id="storeHead">
             <a>Filters</a>
             <div id="nav">
-              <Navbar expand="lg">
-                <Container fluid>
-                  <Navbar.Collapse id="navbar-light-example">
-                    <Nav>
-                      <p>Sorting by:</p>
-                      <NavDropdown
-                        id="nav-dropdown-dark-example"
-                        title=""
-                        menuVariant="light"
-                      >
-                        <NavDropdown.Item href="#action/3.1">
-                          Action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                          Another action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">
-                          Something
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                          Separated link
-                        </NavDropdown.Item>
-                      </NavDropdown>
-                    </Nav>
-                  </Navbar.Collapse>
-                </Container>
-              </Navbar>
+              <Dropdown
+                id=""
+                title=""
+                data={dropdownData}
+                selectedId="1"
+                onSelect={() => {}}
+              />
             </div>
           </div>
         </main>
