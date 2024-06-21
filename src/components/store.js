@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Dropdown from "../hooks/dropdown.tsx";
-import dropdownData from "../json/dropdown.json";
+import dropdownData from "../json/dropdownSort.json";
 
 class Store extends React.Component {
   render() {
@@ -19,7 +19,14 @@ class Store extends React.Component {
               <div id="sort">
                 <p>Sorting by:</p>
                 <Dropdown
-                  id=""
+                  id="1"
+                  title=""
+                  data={dropdownData}
+                  selectedId="1"
+                  onSelect={() => {}}
+                />
+                <Dropdown
+                  id="2"
                   title=""
                   data={dropdownData}
                   selectedId="1"

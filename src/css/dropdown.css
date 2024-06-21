@@ -1,7 +1,7 @@
 .dialog-enter {
   top: 100%;
   transition: top 500ms;
-  position: relative; /* Add this line */
+  position: relative;
 }
 
 .dialog-enter-active {
@@ -11,7 +11,7 @@
 .dialog-exit {
   top: -28px;
   transition: top 500ms;
-  position: relative; /* Add this line */
+  position: relative;
 }
 
 .dialog-exit-active {
