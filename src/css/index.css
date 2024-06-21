@@ -1,6 +1,7 @@
 @import url("clash-display.css");
 @import url("satoshi.css");
 @import url("bootstrap.css");
+@import url("checkbox.css");
 html,
 body,
 div,
@@ -434,6 +435,63 @@ textarea {
   cursor: pointer;
 }
 
+#filter {
+  padding: 50px;
+  max-width: 385px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+#filter .filterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#filter .filterSection h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#filter .filterSection p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#filter .filterSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#filter .filterSection ul li {
+  display: flex;
+  gap: 12px;
+}
+#filter .inputs {
+  display: flex;
+  gap: 10px;
+}
+#filter .inputs .input {
+  border: #000 1px solid;
+  display: flex;
+  gap: 7px;
+  padding-left: 7px;
+}
+#filter .inputs .input input {
+  border: none;
+  background: #fff;
+  width: 43px;
+}
+#filter .inputs .input input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#filter .inputs .input input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
 #home main #mainDiv {
   display: flex;
   justify-content: flex-end;
@@ -806,11 +864,15 @@ textarea {
 #store main #storeHead {
   display: flex;
   padding: 15px 25px;
+  padding-left: 50px;
   justify-content: flex-start;
 }
 #store main #storeHead #filterBtn {
   border: none;
   background-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 #store main #storeHead a {
   padding-top: 4px;
@@ -823,7 +885,9 @@ textarea {
   gap: 15px;
 }
 #store main #storeHead #sort p {
-  padding-top: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 header {

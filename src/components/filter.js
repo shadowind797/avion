@@ -8,62 +8,64 @@ class Filter extends React.Component {
   render() {
     return (
       <div id="filter">
-        <div>
-          <h4></h4>
+        <div className="filterSection">
+          <h4>Product type</h4>
           <ul>
             <li>
-              <input type="checkbox"></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Furniture</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Homeware</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Sofas</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Light fitting</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
-            </li>
-            <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Accesories</p>
             </li>
           </ul>
         </div>
-        <div>
-          <h4></h4>
-          <div>
+        <div className="filterSection">
+          <h4>Cost</h4>
+          <div className="inputs">
             <div>
-              <p></p>
-              <input></input>
+              <p>From:</p>
+              <div className="input">
+                <p>£</p>
+                <input></input>
+              </div>
             </div>
             <div>
-              <p></p>
-              <input></input>
+              <p>To:</p>
+              <div className="input">
+                <p>£</p>
+                <input></input>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <h4></h4>
+        <div className="filterSection">
+          <h4>Collection</h4>
           <ul>
             <li>
-              <input type="checkbox"></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Moonlight</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Modern</p>
             </li>
             <li>
-              <input></input>
-              <p></p>
+              <input type="checkbox" className="custom-checkbox"></input>
+              <p>Vivo le France</p>
             </li>
           </ul>
         </div>

@@ -15,10 +15,14 @@
     #storeHead {
       display: flex;
       padding: 15px 25px;
+      padding-left: 50px;
       justify-content: flex-start;
       #filterBtn {
         border: none;
         background-color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
       }
       a {
         padding-top: 4px;
@@ -30,7 +34,9 @@
         display: flex;
         gap: 15px;
         p {
-          padding-top: 3px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
         }
       }
     }
