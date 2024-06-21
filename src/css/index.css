@@ -405,14 +405,32 @@ textarea {
   padding: 0.2em 0;
 }
 
-.dropdownBtn {
+.relative {
+  position: relative;
+}
+.relative .dropdownBtn {
   border: none;
   background-color: #fff;
   display: flex;
   vertical-align: middle;
+  margin-right: 30px;
+  width: 120px;
 }
-.dropdownBtn #dropdownIcon {
+.relative .dropdownBtn #dropdownIcon {
   margin-top: 3px;
+  transition: 300ms;
+}
+.relative #dropMenu {
+  position: absolute;
+  top: 23px;
+  left: 6px;
+  background-color: #fff;
+  padding: 7px;
+}
+.relative #dropMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 #home main #mainDiv {
@@ -790,10 +808,17 @@ textarea {
   justify-content: flex-start;
 }
 #store main #storeHead a {
-  padding-top: 5px;
+  padding-top: 4px;
 }
 #store main #storeHead #nav {
   margin-left: auto;
+}
+#store main #storeHead #sort {
+  display: flex;
+  gap: 5px;
+}
+#store main #storeHead #sort p {
+  padding-top: 4px;
 }
 
 header {

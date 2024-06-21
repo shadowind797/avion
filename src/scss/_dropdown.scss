@@ -1,9 +1,27 @@
-.dropdownBtn {
+.relative {
+  position: relative;
+  .dropdownBtn {
     border: none;
     background-color: #fff;
     display: flex;
     vertical-align: middle;
+    margin-right: 30px;
+    width: 120px;
     #dropdownIcon {
-        margin-top: 3px;
+      margin-top: 3px;
+      transition: 300ms;
     }
+  }
+  #dropMenu {
+    position: absolute;
+    top: 23px;
+    left: 6px;
+    background-color: #fff;
+    padding:7px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
 }

@@ -13,15 +13,22 @@
       }
     }
     #storeHead {
+      display: flex;
+      padding: 15px 25px;
+      justify-content: flex-start;
+      a {
+        padding-top: 4px;
+      }
+      #nav {
+        margin-left: auto;
+      }
+      #sort {
         display: flex;
-        padding: 15px 25px;
-        justify-content: flex-start;
-        a {
-            padding-top: 5px;
+        gap: 5px;
+        p {
+          padding-top: 4px;
         }
-        #nav {
-            margin-left: auto;
-        }
+      }
     }
   }
 }

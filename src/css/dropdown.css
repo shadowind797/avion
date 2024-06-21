@@ -1,0 +1,20 @@
+.dialog-enter {
+  top: 100%;
+  transition: top 500ms;
+  position: relative; /* Add this line */
+}
+
+.dialog-enter-active {
+  top: -30px;
+}
+
+.dialog-exit {
+  top: -28px;
+  transition: top 500ms;
+  position: relative; /* Add this line */
+}
+
+.dialog-exit-active {
+  opacity: 0;
+  transition: 300ms;
+}

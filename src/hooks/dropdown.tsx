@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import useOutsideClick from "./useOutsideClick.tsx";
-import dropdown from "../img/dropdown.svg"
+import { CSSTransition } from "react-transition-group";
+import "../css/dropdown.css";
+import dropdown from "../img/dropdown.svg";
 
 interface DropdownItem {
   id: string;
@@ -13,7 +15,6 @@ interface DropdownProps {
   title?: string;
   data: DropdownItem[];
   selectedId?: string;
-  showSort: boolean;
   onSelect?: (id: string) => void;
 }
 
@@ -22,7 +23,6 @@ const Dropdown = ({
   title = "Select",
   data,
   selectedId,
-  showSort,
   onSelect,
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -63,19 +63,33 @@ const Dropdown = ({
         className="dropdownBtn"
       >
         <span>{selectedItem?.name || title}</span>
-        {/* <img src={dropdown} id="dropdownIcon" style={show ? {transform: "rotate(180deg)"} : {}}></img> */}
+        <img
+          src={dropdown}
+          id="dropdownIcon"
+          style={isOpen ? { transform: "rotate(180deg)" } : {}}
+        ></img>
       </button>
-      {isOpen && (
-        <div aria-label="Dropdown menu">
-          <ul role="menu" aria-labelledby={id} aria-orientation="vertical">
-            {data?.map((item) => (
-              <li key={item.id} onClick={() => handleChange(item)}>
-                <span>{item.name}</span>
-              </li>
-            ))}
-          </ul>
+      <CSSTransition
+        in={isOpen}
+        timeout={300}
+        classNames="dialog"
+        unmountOnExit
+      >
+        <div className="dropdown-content">
+          <div
+            aria-label="Dropdown menu"
+            id="dropMenu"
+          >
+            <ul role="menu" aria-labelledby={id} aria-orientation="vertical">
+              {data?.map((item) => (
+                <li key={item.id} onClick={() => handleChange(item)}>
+                  <span>{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      )}
+      </CSSTransition>
     </div>
   );
 };
