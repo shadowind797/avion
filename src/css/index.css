@@ -413,8 +413,6 @@ textarea {
   background-color: #fff;
   display: flex;
   vertical-align: middle;
-  margin-right: 30px;
-  width: 120px;
 }
 .relative .dropdownBtn #dropdownIcon {
   margin-top: 3px;
@@ -430,7 +428,10 @@ textarea {
 .relative #dropMenu ul {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
+}
+.relative #dropMenu ul li {
+  cursor: pointer;
 }
 
 #home main #mainDiv {
@@ -807,6 +808,10 @@ textarea {
   padding: 15px 25px;
   justify-content: flex-start;
 }
+#store main #storeHead #filterBtn {
+  border: none;
+  background-color: #fff;
+}
 #store main #storeHead a {
   padding-top: 4px;
 }
@@ -815,10 +820,10 @@ textarea {
 }
 #store main #storeHead #sort {
   display: flex;
-  gap: 5px;
+  gap: 15px;
 }
 #store main #storeHead #sort p {
-  padding-top: 4px;
+  padding-top: 3px;
 }
 
 header {

@@ -16,6 +16,10 @@
       display: flex;
       padding: 15px 25px;
       justify-content: flex-start;
+      #filterBtn {
+        border: none;
+        background-color: #fff;
+      }
       a {
         padding-top: 4px;
       }
@@ -24,9 +28,9 @@
       }
       #sort {
         display: flex;
-        gap: 5px;
+        gap: 15px;
         p {
-          padding-top: 4px;
+          padding-top: 3px;
         }
       }
     }
