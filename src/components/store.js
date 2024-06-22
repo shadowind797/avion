@@ -3,6 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import Dropdown from "../hooks/dropdown.tsx";
 import Filter from "./filter.js";
+import Products from "./products.js";
 import dropdownData from "../json/dropdownSort.json";
 import sortData from "../json/dropdownSortSide.json";
 
@@ -22,7 +23,8 @@ class Store extends React.Component {
             <h1>Our products</h1>
           </div>
           <div id="storeHead">
-            <button id="filterBtn"
+            <button
+              id="filterBtn"
               onClick={() =>
                 this.setState((prevState) => ({
                   filterShow: !prevState.filterShow,
@@ -51,10 +53,13 @@ class Store extends React.Component {
               </div>
             </div>
           </div>
-          <div
-            style={this.state.filterShow ? { opacity: "1" } : { opacity: "0" }}
+          <div id="filterDiv"
+            style={this.state.filterShow ? { display: "block"} : { display: "none" }}
           >
             <Filter />
+          </div>
+          <div id="products">
+            <Products />
           </div>
         </main>
         <Footer />

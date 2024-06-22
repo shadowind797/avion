@@ -435,61 +435,89 @@ textarea {
   cursor: pointer;
 }
 
-#filter {
+#filterDiv {
+  padding: 50px;
+  max-width: 385px;
+}
+#filterDiv #filter {
   padding: 50px;
   max-width: 385px;
   display: flex;
   flex-direction: column;
   gap: 48px;
+  position: relative;
+  z-index: 10;
 }
-#filter .filterSection {
+#filterDiv #filter .filterSection {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-#filter .filterSection h4 {
+#filterDiv #filter .filterSection h4 {
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
 }
-#filter .filterSection p {
+#filterDiv #filter .filterSection p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
-#filter .filterSection ul {
+#filterDiv #filter .filterSection ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-#filter .filterSection ul li {
+#filterDiv #filter .filterSection ul li {
   display: flex;
   gap: 12px;
 }
-#filter .inputs {
+#filterDiv #filter .inputs {
   display: flex;
   gap: 10px;
 }
-#filter .inputs .input {
-  border: #000 1px solid;
+#filterDiv #filter .inputs .input {
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
   display: flex;
   gap: 7px;
   padding-left: 7px;
 }
-#filter .inputs .input input {
+#filterDiv #filter .inputs .input input {
   border: none;
   background: #fff;
   width: 43px;
 }
-#filter .inputs .input input::-moz-placeholder {
+#filterDiv #filter .inputs .input input::-moz-placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
-#filter .inputs .input input::placeholder {
+#filterDiv #filter .inputs .input input::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+}
+
+#products #productsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1440px;
+  margin: auto;
+}
+#products #productsDiv .item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+}
+#products #productsDiv .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 #home main #mainDiv {

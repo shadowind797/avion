@@ -1,49 +1,56 @@
-#filter {
+#filterDiv {
   padding: 50px;
   max-width: 385px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  .filterSection {
+  #filter {
+    padding: 50px;
+    max-width: 385px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    h4 {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 140%;
-    }
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 150%;
-    }
-    ul {
+    gap: 48px;
+    position: relative;
+    z-index: 10;
+    .filterSection {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      li {
+      gap: 20px;
+      h4 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+      }
+      ul {
         display: flex;
+        flex-direction: column;
         gap: 12px;
+        li {
+          display: flex;
+          gap: 12px;
+        }
       }
     }
-  }
-  .inputs {
-    display: flex;
-    gap: 10px;
-    .input {
-      border: #000 1px solid;
+    .inputs {
       display: flex;
-      gap: 7px;
-      padding-left: 7px;
-      input {
-        border: none;
-        background: #fff;
-        width: 43px;
-        &::placeholder {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 150%;
+      gap: 10px;
+      .input {
+        border: 1px solid #adb5bd;
+        border-radius: 0.25em;
+        display: flex;
+        gap: 7px;
+        padding-left: 7px;
+        input {
+          border: none;
+          background: #fff;
+          width: 43px;
+          &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+          }
         }
       }
     }

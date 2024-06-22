@@ -1,0 +1,23 @@
+#products {
+    #productsDiv {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1440px;
+        margin: auto;
+        .item {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-bottom: 50px;
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+            }
+          }
+          
+    }
+}

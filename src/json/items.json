@@ -30,5 +30,133 @@
     "cost": 399,
     "collection": "",
     "novetly": 1
+  },
+  {
+    "id": 5,
+    "name": "The Dandy chair",
+    "img": "./img/Photo1.png",
+    "cost": 250,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 6,
+    "name": "Rustic Vase Set",
+    "img": "./img/Photo2.png",
+    "cost": 155,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 7,
+    "name": "The Silky Vase",
+    "img": "./img/Photo3.png",
+    "cost": 125,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 8,
+    "name": "The Lucy Lamp",
+    "img": "./img/Photo4.png",
+    "cost": 399,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 9,
+    "name": "The Dandy chair",
+    "img": "./img/Photo1.png",
+    "cost": 250,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 10,
+    "name": "Rustic Vase Set",
+    "img": "./img/Photo2.png",
+    "cost": 155,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 11,
+    "name": "The Silky Vase",
+    "img": "./img/Photo3.png",
+    "cost": 125,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 12,
+    "name": "The Lucy Lamp",
+    "img": "./img/Photo4.png",
+    "cost": 399,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 13,
+    "name": "The Dandy chair",
+    "img": "./img/Photo1.png",
+    "cost": 250,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 14,
+    "name": "Rustic Vase Set",
+    "img": "./img/Photo2.png",
+    "cost": 155,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 15,
+    "name": "The Silky Vase",
+    "img": "./img/Photo3.png",
+    "cost": 125,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 16,
+    "name": "The Lucy Lamp",
+    "img": "./img/Photo4.png",
+    "cost": 399,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 17,
+    "name": "The Dandy chair",
+    "img": "./img/Photo1.png",
+    "cost": 250,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 18,
+    "name": "Rustic Vase Set",
+    "img": "./img/Photo2.png",
+    "cost": 155,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 19,
+    "name": "The Silky Vase",
+    "img": "./img/Photo3.png",
+    "cost": 125,
+    "collection": "",
+    "novetly": 1
+  },
+  {
+    "id": 20,
+    "name": "The Lucy Lamp",
+    "img": "./img/Photo4.png",
+    "cost": 399,
+    "collection": "",
+    "novetly": 1
   }
 ]
