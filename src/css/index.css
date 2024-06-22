@@ -437,16 +437,15 @@ textarea {
 
 #filterDiv {
   padding: 50px;
-  max-width: 385px;
+  padding-top: 20px;
+  max-width: 190px;
 }
 #filterDiv #filter {
-  padding: 50px;
-  max-width: 385px;
+  max-width: 190px;
   display: flex;
   flex-direction: column;
   gap: 48px;
   position: relative;
-  z-index: 10;
 }
 #filterDiv #filter .filterSection {
   display: flex;
@@ -499,6 +498,9 @@ textarea {
   line-height: 150%;
 }
 
+#products {
+  margin: auto;
+}
 #products #productsDiv {
   display: flex;
   flex-wrap: wrap;
@@ -916,6 +918,9 @@ textarea {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+}
+#store main #filter-store {
+  display: flex;
 }
 
 header {

@@ -1,14 +1,14 @@
 #filterDiv {
   padding: 50px;
-  max-width: 385px;
+  padding-top: 20px;
+  max-width: 190px;
+
   #filter {
-    padding: 50px;
-    max-width: 385px;
+    max-width: 190px;
     display: flex;
     flex-direction: column;
     gap: 48px;
     position: relative;
-    z-index: 10;
     .filterSection {
       display: flex;
       flex-direction: column;

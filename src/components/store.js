@@ -53,13 +53,20 @@ class Store extends React.Component {
               </div>
             </div>
           </div>
-          <div id="filterDiv"
-            style={this.state.filterShow ? { display: "block"} : { display: "none" }}
-          >
-            <Filter />
-          </div>
-          <div id="products">
-            <Products />
+          <div id="filter-store">
+            <div
+              id="filterDiv"
+              style={
+                this.state.filterShow
+                  ? { display: "block" }
+                  : { display: "none" }
+              }
+            >
+              <Filter />
+            </div>
+            <div id="products">
+              <Products />
+            </div>
           </div>
         </main>
         <Footer />
