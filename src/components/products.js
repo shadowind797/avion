@@ -8,12 +8,21 @@ class Products extends React.Component {
     this.filtered = [];
   }
   render() {
-    const firstItems = jsonItems.slice(0, 12);
+    const { filters } = this.props;
+
+    const allowedTypes = this.props.filters
+
+    const filteredItems = jsonItems.filter((item) => {
+      return allowedTypes.includes(item.type) || allowedTypes.includes(item.collection);
+    });
+
+    const itemsToRender =
+      filters.length > 0 ? filteredItems : jsonItems.slice(0, 12);
     return (
       <div id="productsDiv">
-        {this.props.filters.length === 0
-          ? firstItems.map((item) => <Item key={item.id} item={item} />)
-          : null}
+        {itemsToRender.map((item) => (
+          <Item key={item.id} item={item} />
+        ))}
       </div>
     );
   }

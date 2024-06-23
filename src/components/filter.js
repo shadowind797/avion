@@ -13,23 +13,83 @@ class Filter extends React.Component {
         <div className="filterSection">
           <h4>Product type</h4>
           <ul>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Furniture")) {
+                  this.props.filters.push("Furniture");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Furniture"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Furniture</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Homeware")) {
+                  this.props.filters.push("Homeware");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Homeware"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Homeware</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Sofas")) {
+                  this.props.filters.push("Sofas");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Sofas"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Sofas</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Light")) {
+                  this.props.filters.push("Light");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Light"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Light fitting</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Accesories")) {
+                  this.props.filters.push("Accesories");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Accesories"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Accesories</p>
             </li>
@@ -57,7 +117,19 @@ class Filter extends React.Component {
         <div className="filterSection">
           <h4>Collection</h4>
           <ul>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Moonlight")) {
+                  this.props.filters.push("Moonlight");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Moonlight"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Moonlight</p>
             </li>
