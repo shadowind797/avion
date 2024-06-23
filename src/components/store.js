@@ -12,8 +12,12 @@ class Store extends React.Component {
     super(props);
     this.state = {
       filterShow: false,
+      filters: [],
     };
   }
+  handleFilterChange = (newFilters) => {
+    this.setState({ filters: newFilters });
+  };
   render() {
     return (
       <div id="store">
@@ -62,10 +66,13 @@ class Store extends React.Component {
                   : { display: "none" }
               }
             >
-              <Filter />
+              <Filter
+                filters={this.state.filters}
+                onChange={this.handleFilterChange}
+              />
             </div>
             <div id="products">
-              <Products />
+              <Products filters={this.state.filters} />
             </div>
           </div>
         </main>

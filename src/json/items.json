@@ -4,159 +4,179 @@
     "name": "The Dandy chair",
     "img": "./img/Photo1.png",
     "cost": 250,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 2,
+    "type": "Furniture"
   },
   {
     "id": 2,
     "name": "Rustic Vase Set",
     "img": "./img/Photo2.png",
     "cost": 155,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 1,
+    "type": "Homeware"
   },
   {
     "id": 3,
     "name": "The Silky Vase",
     "img": "./img/Photo3.png",
     "cost": 125,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 3,
+    "type": "Sofas"
   },
   {
     "id": 4,
     "name": "The Lucy Lamp",
     "img": "./img/Photo4.png",
     "cost": 399,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 3,
+    "type": "Light"
   },
   {
     "id": 5,
     "name": "The Dandy chair",
     "img": "./img/Photo1.png",
     "cost": 250,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 1,
+    "type": "Accesories"
   },
   {
     "id": 6,
     "name": "Rustic Vase Set",
     "img": "./img/Photo2.png",
     "cost": 155,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 2,
+    "type": "Accesories"
   },
   {
     "id": 7,
     "name": "The Silky Vase",
     "img": "./img/Photo3.png",
     "cost": 125,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 1,
+    "type": "Homeware"
   },
   {
     "id": 8,
     "name": "The Lucy Lamp",
     "img": "./img/Photo4.png",
     "cost": 399,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 3,
+    "type": "Furniture"
   },
   {
     "id": 9,
     "name": "The Dandy chair",
     "img": "./img/Photo1.png",
     "cost": 250,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 1,
+    "type": "Furniture"
   },
   {
     "id": 10,
     "name": "Rustic Vase Set",
     "img": "./img/Photo2.png",
     "cost": 155,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 1,
+    "type": "Light"
   },
   {
     "id": 11,
     "name": "The Silky Vase",
     "img": "./img/Photo3.png",
     "cost": 125,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 2,
+    "type": "Sofas"
   },
   {
     "id": 12,
     "name": "The Lucy Lamp",
     "img": "./img/Photo4.png",
     "cost": 399,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 2,
+    "type": "Furniture"
   },
   {
     "id": 13,
     "name": "The Dandy chair",
     "img": "./img/Photo1.png",
     "cost": 250,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 2,
+    "type": "Accesories"
   },
   {
     "id": 14,
     "name": "Rustic Vase Set",
     "img": "./img/Photo2.png",
     "cost": 155,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 3,
+    "type": "Homeware"
   },
   {
     "id": 15,
     "name": "The Silky Vase",
     "img": "./img/Photo3.png",
     "cost": 125,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 3,
+    "type": "Homeware"
   },
   {
     "id": 16,
     "name": "The Lucy Lamp",
     "img": "./img/Photo4.png",
     "cost": 399,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 1,
+    "type": "Furniture"
   },
   {
     "id": 17,
     "name": "The Dandy chair",
     "img": "./img/Photo1.png",
     "cost": 250,
-    "collection": "",
-    "novetly": 1
+    "collection": "Modern",
+    "novetly": 1,
+    "type": "Light"
   },
   {
     "id": 18,
     "name": "Rustic Vase Set",
     "img": "./img/Photo2.png",
     "cost": 155,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 2,
+    "type": "Sofas"
   },
   {
     "id": 19,
     "name": "The Silky Vase",
     "img": "./img/Photo3.png",
     "cost": 125,
-    "collection": "",
-    "novetly": 1
+    "collection": "Moonlight",
+    "novetly": 1,
+    "type": "Sofas"
   },
   {
     "id": 20,
     "name": "The Lucy Lamp",
     "img": "./img/Photo4.png",
     "cost": 399,
-    "collection": "",
-    "novetly": 1
+    "collection": "Vivo le France",
+    "novetly": 3,
+    "type": "Accesories"
   }
 ]

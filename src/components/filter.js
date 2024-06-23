@@ -4,7 +4,9 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  handleChange = (newFilters) => {
+    this.props.onChange(newFilters);
+  };
   render() {
     return (
       <div id="filter">
