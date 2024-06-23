@@ -10,10 +10,13 @@ class Products extends React.Component {
   render() {
     const { filters } = this.props;
 
-    const allowedTypes = this.props.filters
+    const allowedTypes = this.props.filters;
 
     const filteredItems = jsonItems.filter((item) => {
-      return allowedTypes.includes(item.type) || allowedTypes.includes(item.collection);
+      return (
+        allowedTypes.includes(item.type) ||
+        allowedTypes.includes(item.collection)
+      );
     });
 
     const itemsToRender =

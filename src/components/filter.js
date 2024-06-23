@@ -133,11 +133,35 @@ class Filter extends React.Component {
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Moonlight</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Modern")) {
+                  this.props.filters.push("Modern");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Modern"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Modern</p>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                if (!this.props.filters.includes("Vivo le France")) {
+                  this.props.filters.push("Vivo le France");
+                  this.handleChange(this.props.filters);
+                } else {
+                  const updatedFilters = this.props.filters.filter(
+                    (item) => item !== "Vivo le France"
+                  );
+                  this.handleChange(updatedFilters);
+                }
+              }}
+            >
               <input type="checkbox" className="custom-checkbox"></input>
               <p>Vivo le France</p>
             </li>
