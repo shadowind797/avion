@@ -20,7 +20,7 @@ class Products extends React.Component {
     });
 
     const itemsToRender =
-      filters.length > 0 ? filteredItems : jsonItems.slice(0, 12);
+      filters.length > 0 ? filteredItems.slice(0, 12) : jsonItems.slice(0, 12);
     return (
       <div id="productsDiv">
         {itemsToRender.map((item) => (

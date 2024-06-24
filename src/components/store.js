@@ -75,6 +75,9 @@ class Store extends React.Component {
               <Products filters={this.state.filters} />
             </div>
           </div>
+          <div id="loadMore">
+            <button>Load more</button>
+          </div>
         </main>
         <Footer />
       </div>
