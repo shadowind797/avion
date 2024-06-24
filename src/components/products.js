@@ -8,7 +8,7 @@ class Products extends React.Component {
     this.filtered = [];
   }
   render() {
-    const { filters } = this.props;
+    const { filters, sort, sortSide } = this.props;
 
     const allowedTypes = this.props.filters;
 
@@ -21,6 +21,12 @@ class Products extends React.Component {
 
     const itemsToRender =
       filters.length > 0 ? filteredItems.slice(0, 12) : jsonItems.slice(0, 12);
+
+    if (sort.name === "Cost" && sortSide.name === "Descending") {
+      itemsToRender.sort((a, b) => b.cost - a.cost);
+    } else if (sort.name === "Cost" && sortSide.name === "Ascending") {
+      itemsToRender.sort((a, b) => a.cost - b.cost);
+    }
     return (
       <div id="productsDiv">
         {itemsToRender.map((item) => (

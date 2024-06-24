@@ -13,10 +13,30 @@ class Store extends React.Component {
     this.state = {
       filterShow: false,
       filters: [],
+      sort: {
+        id: "1",
+        name: "Cost",
+      },
+      sortSide: {
+        id: "1",
+        name: "Descending",
+      },
     };
+
+    this.handleSortSelect = this.handleSortSelect.bind(this);
+    this.handleSortsideSelect = this.handleSortsideSelect.bind(this);
   }
   handleFilterChange = (newFilters) => {
     this.setState({ filters: newFilters });
+  };
+  handleSortSelect = (id) => {
+    const selectedItem = dropdownData.find((item) => item.id === id);
+    this.setState({ sort: selectedItem });
+    console.log(this.state.sort)
+  };
+  handleSortsideSelect = (id) => {
+    const selectedItem = dropdownData.find((item) => item.id === id);
+    this.setState({ sortSide: selectedItem });
   };
   render() {
     return (
@@ -44,15 +64,15 @@ class Store extends React.Component {
                   id="1"
                   title=""
                   data={dropdownData}
-                  selectedId="1"
-                  onSelect={() => {}}
+                  selectedId={this.state.sort.id}
+                  onSelect={this.handleSortSelect}
                 />
                 <Dropdown
                   id="2"
                   title=""
                   data={sortData}
-                  selectedId="1"
-                  onSelect={() => {}}
+                  selectedId={this.state.sortSide.id}
+                  onSelect={this.handleSortsideSelect}
                 />
               </div>
             </div>
@@ -72,11 +92,23 @@ class Store extends React.Component {
               />
             </div>
             <div id="products">
-              <Products filters={this.state.filters} />
+              <Products
+                filters={this.state.filters}
+                sort={this.state.sort}
+                sortSide={this.state.sortSide}
+              />
             </div>
           </div>
           <div id="loadMore">
-            <button>Load more</button>
+            <button
+              style={
+                this.state.filterShow
+                  ? { marginLeft: "255px" }
+                  : { marginLeft: "0" }
+              }
+            >
+              Load more
+            </button>
           </div>
         </main>
         <Footer />

@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Rustic Vase Set",
-    "img": "./img/Photo2.png",
+    "img": "./img/Photo8.png",
     "cost": 155,
     "collection": "Moonlight",
     "novetly": 1,
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "The Silky Vase",
-    "img": "./img/Photo3.png",
+    "img": "./img/Photo6.png",
     "cost": 125,
     "collection": "Modern",
     "novetly": 3,
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Rustic Vase Set",
-    "img": "./img/Photo2.png",
+    "img": "./img/Photo7.png",
     "cost": 155,
     "collection": "Moonlight",
     "novetly": 2,
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "name": "The Lucy Lamp",
-    "img": "./img/Photo4.png",
+    "img": "./img/Photo5.png",
     "cost": 399,
     "collection": "Modern",
     "novetly": 3,
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "name": "The Dandy chair",
-    "img": "./img/Photo1.png",
+    "img": "./img/Photo6.png",
     "cost": 250,
     "collection": "Vivo le France",
     "novetly": 1,
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "name": "The Lucy Lamp",
-    "img": "./img/Photo4.png",
+    "img": "./img/Photo5.png",
     "cost": 399,
     "collection": "Moonlight",
     "novetly": 2,
@@ -110,7 +110,7 @@
   {
     "id": 13,
     "name": "The Dandy chair",
-    "img": "./img/Photo1.png",
+    "img": "./img/Photo8.png",
     "cost": 250,
     "collection": "Modern",
     "novetly": 2,
@@ -119,7 +119,7 @@
   {
     "id": 14,
     "name": "Rustic Vase Set",
-    "img": "./img/Photo2.png",
+    "img": "./img/Photo8.png",
     "cost": 155,
     "collection": "Modern",
     "novetly": 3,
@@ -146,7 +146,7 @@
   {
     "id": 17,
     "name": "The Dandy chair",
-    "img": "./img/Photo1.png",
+    "img": "./img/Photo6.png",
     "cost": 250,
     "collection": "Modern",
     "novetly": 1,
@@ -164,7 +164,7 @@
   {
     "id": 19,
     "name": "The Silky Vase",
-    "img": "./img/Photo3.png",
+    "img": "./img/Photo7.png",
     "cost": 125,
     "collection": "Moonlight",
     "novetly": 1,
@@ -173,7 +173,7 @@
   {
     "id": 20,
     "name": "The Lucy Lamp",
-    "img": "./img/Photo4.png",
+    "img": "./img/Photo5.png",
     "cost": 399,
     "collection": "Vivo le France",
     "novetly": 3,

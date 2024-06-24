@@ -514,6 +514,7 @@ textarea {
   flex-direction: column;
   gap: 24px;
   padding-bottom: 50px;
+  cursor: pointer;
 }
 #products #productsDiv .item div {
   display: flex;
