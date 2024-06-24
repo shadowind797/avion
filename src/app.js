@@ -13,7 +13,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/store" element={<Store />} />
-          <Route exact path="/addtocart" element={<AddToCart />} />
+          <Route exact path="/addtocart/:itemId" element={<AddToCart />} />
         </Routes>
       </BrowserRouter>
     </div>
