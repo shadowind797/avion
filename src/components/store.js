@@ -32,11 +32,11 @@ class Store extends React.Component {
   handleSortSelect = (id) => {
     const selectedItem = dropdownData.find((item) => item.id === id);
     this.setState({ sort: selectedItem });
-    console.log(this.state.sort)
   };
   handleSortsideSelect = (id) => {
-    const selectedItem = dropdownData.find((item) => item.id === id);
+    const selectedItem = sortData.find((item) => item.id === id);
     this.setState({ sortSide: selectedItem });
+
   };
   render() {
     return (

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Item from "./item";
 import jsonItems from "../json/items.json";
 
@@ -26,13 +27,23 @@ class Products extends React.Component {
       itemsToRender.sort((a, b) => b.cost - a.cost);
     } else if (sort.name === "Cost" && sortSide.name === "Ascending") {
       itemsToRender.sort((a, b) => a.cost - b.cost);
+    } else if (sort.name === "Novelty" && sortSide.name === "Descending") {
+      itemsToRender.sort((a, b) => b.novetly - a.novetly);
+    } else if (sort.name === "Novelty" && sortSide.name === "Ascending") {
+      itemsToRender.sort((a, b) => a.novetly - b.novetly);
+    } else if (sort.name === "Name" && sortSide.name === "Descending") {
+      itemsToRender.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort.name === "Name" && sortSide.name === "Ascending") {
+      itemsToRender.sort((a, b) => b.name.localeCompare(a.name));
     }
     return (
-      <div id="productsDiv">
-        {itemsToRender.map((item) => (
-          <Item key={item.id} item={item} />
-        ))}
-      </div>
+      <Link to="/addtocart">
+        <div id="productsDiv">
+          {itemsToRender.map((item) => (
+            <Item key={item.id} item={item} />
+          ))}
+        </div>
+      </Link>
     );
   }
 }
