@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
@@ -48,7 +48,9 @@ function AddToCart() {
                     <div className="slider__item-content">
                       <div>
                         {firstFourItems.map((item) => (
-                          <Item item={item} />
+                          <Link key={item.id} to={`/addtocart/${item.id}`}>
+                            <Item key={item.id} item={item} />
+                          </Link>
                         ))}
                       </div>
                       <button>View collection</button>
@@ -60,7 +62,9 @@ function AddToCart() {
                     <div className="slider__item-content">
                       <div>
                         {firstFourItems.map((item) => (
-                          <Item item={item} />
+                          <Link key={item.id} to={`/addtocart/${item.id}`}>
+                            <Item key={item.id} item={item} />
+                          </Link>
                         ))}
                       </div>
                       <button>View collection</button>
@@ -72,7 +76,9 @@ function AddToCart() {
                     <div className="slider__item-content">
                       <div>
                         {firstFourItems.map((item) => (
-                          <Item item={item} />
+                          <Link key={item.id} to={`/addtocart/${item.id}`}>
+                            <Item key={item.id} item={item} />
+                          </Link>
                         ))}
                       </div>
                       <button>View collection</button>

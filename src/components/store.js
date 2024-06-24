@@ -22,9 +22,6 @@ class Store extends React.Component {
         name: "Descending",
       },
     };
-
-    this.handleSortSelect = this.handleSortSelect.bind(this);
-    this.handleSortsideSelect = this.handleSortsideSelect.bind(this);
   }
   handleFilterChange = (newFilters) => {
     this.setState({ filters: newFilters });

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
@@ -95,7 +96,9 @@ class Home extends React.Component {
                       <div className="slider__item-content">
                         <div>
                           {firstFourItems.map((item) => (
-                            <Item item={item} />
+                            <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <Item key={item.id} item={item} />
+                            </Link>
                           ))}
                         </div>
                         <button>View collection</button>
@@ -107,7 +110,9 @@ class Home extends React.Component {
                       <div className="slider__item-content">
                         <div>
                           {firstFourItems.map((item) => (
-                            <Item item={item} />
+                            <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <Item key={item.id} item={item} />
+                            </Link>
                           ))}
                         </div>
                         <button>View collection</button>
@@ -119,7 +124,9 @@ class Home extends React.Component {
                       <div className="slider__item-content">
                         <div>
                           {firstFourItems.map((item) => (
-                            <Item item={item} />
+                            <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <Item key={item.id} item={item} />
+                            </Link>
                           ))}
                         </div>
                         <button>View collection</button>
