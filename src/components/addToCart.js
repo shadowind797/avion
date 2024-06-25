@@ -6,7 +6,7 @@ import Footer from "./footer";
 import Slider from "./slider";
 import Item from "../components/item";
 import jsonItems from "../json/items.json";
-import cartI from "../json/cart.json"
+import cartI from "../server/json/cart.json"
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
@@ -78,7 +78,7 @@ function AddToCart() {
 
   const [cartItems, setCartItems] = useState(cartI);
 
-  const cartItem = {id: itemId, name: name, description: description, cost: cost, quantitity: quantitity}
+  const cartItem = {id: itemId, name: name, img: img, description: description, cost: cost, quantitity: quantitity}
 
   const pushInCart = () => {
     setCartItems([...cartItems, cartItem])
