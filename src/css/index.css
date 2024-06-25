@@ -996,8 +996,122 @@ textarea {
 #addtocart main #cartadd {
   padding: 50px 80px;
   display: flex;
-  gap: 65px;
+  gap: 70px;
   justify-content: center;
+}
+#addtocart main #cartadd #addImg img {
+  width: 607px;
+  height: 661px;
+}
+#addtocart main #cartadd #addInfo {
+  display: flex;
+  flex-direction: column;
+  width: 518px;
+}
+#addtocart main #cartadd #addInfo #addHead {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 28px;
+  border-bottom: #ebe8f4 1px solid;
+}
+#addtocart main #cartadd #addInfo #addHead h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addHead p {
+  font-size: 24px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+#addtocart main #cartadd #addInfo #addDesc h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDesc p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDimens {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#addtocart main #cartadd #addInfo #addDimens h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDimens #table {
+  display: flex;
+}
+#addtocart main #cartadd #addInfo #addDimens #table div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#addtocart main #cartadd #addInfo #addDimens #table div h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDimens #table div p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addDimens #table #first {
+  padding-right: 50px;
+}
+#addtocart main #cartadd #addInfo #addDimens #table #second {
+  padding-left: 50px;
+  border-left: #ebe8f4 1px solid;
+  padding-right: 50px;
+  border-right: #ebe8f4 1px solid;
+}
+#addtocart main #cartadd #addInfo #addDimens #table #third {
+  padding-left: 50px;
+}
+#addtocart main #cartadd #addInfo #addQuant {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc {
+  display: flex;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc div {
+  width: 122px;
+  height: 46px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 12px 16px;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc div p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc button {
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border: none;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc #minus {
+  background-image: url("../img/minus.svg");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#addtocart main #cartadd #addInfo #addQuant #calc #plus {
+  background-image: url("../img/plus.svg");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #addtocart main .slider__item-content {
   text-align: center;
@@ -1313,6 +1427,7 @@ a {
 
 body {
   color: #2a254b;
+  background-color: #F9F9F9;
 }
 body h1,
 body h2,

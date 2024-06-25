@@ -3,8 +3,124 @@
     #cartadd {
       padding: 50px 80px;
       display: flex;
-      gap: 65px;
+      gap: 70px;
       justify-content: center;
+      #addImg {
+        img {
+          width: 607px;
+          height: 661px;
+        }
+      }
+      #addInfo {
+        display: flex;
+        flex-direction: column;
+        width: 518px;
+        #addHead {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding-bottom: 28px;
+          border-bottom: #ebe8f4 1px solid;
+          h1 {
+            font-size: 36px;
+            font-weight: 400;
+          }
+          p {
+            font-size: 24px;
+            font-weight: 400;
+          }
+        }
+        #addDesc {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          padding-top: 24px;
+          padding-bottom: 36px;
+          h3 {
+            font-size: 16px;
+            font-weight: 400;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+        #addDimens {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          h3 {
+            font-size: 16px;
+            font-weight: 400;
+          }
+          #table {
+            display: flex;
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              h4 {
+                font-size: 14px;
+                font-weight: 400;
+              }
+              p {
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+            #first {
+              padding-right: 50px;
+            }
+            #second {
+              padding-left: 50px;
+              border-left: #ebe8f4 1px solid;
+              padding-right: 50px;
+              border-right: #ebe8f4 1px solid;
+            }
+            #third {
+              padding-left: 50px;
+            }
+          }
+        }
+        #addQuant {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          #calc {
+            display: flex;
+            div {
+              width: 122px;
+              height: 46px;
+              background-color: #fff;
+              display: flex;
+              justify-content: center;
+              padding: 12px 16px;
+              p {
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+            button {
+              width: 46px;
+              height: 46px;
+              background-color: #fff;
+              border: none;
+            }
+            #minus {
+              background-image: url("../img/minus.svg");
+              background-size: 30px;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+            #plus {
+              background-image: url("../img/plus.svg");
+              background-size: 30px;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
     }
     .slider__item-content {
       text-align: center;

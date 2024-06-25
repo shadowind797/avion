@@ -92,16 +92,16 @@ function AddToCart() {
             </div>
             <div id="addDimens">
               <h3>Dimensions</h3>
-              <div>
-                <div>
+              <div id="table">
+                <div id="first">
                   <h4>Height</h4>
                   <p>{dimensions.h}</p>
                 </div>
-                <div>
+                <div id="second">
                   <h4>Width</h4>
                   <p>{dimensions.w}</p>
                 </div>
-                <div>
+                <div id="third">
                   <h4>Depth</h4>
                   <p>{dimensions.d}</p>
                 </div>
@@ -109,8 +109,12 @@ function AddToCart() {
             </div>
             <div id="addQuant">
               <h3>Quantitity</h3>
-              <div>
-                <p>1</p> {"//////////////////////////////////////////////////////////////add var"}
+              <div id="calc">
+                <button id="minus"></button>
+                <div>
+                  <p>1</p>
+                </div>
+                <button id="plus"></button>
               </div>
             </div>
             <div id="add">
