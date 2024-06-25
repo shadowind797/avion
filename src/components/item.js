@@ -48,7 +48,7 @@ class Item extends React.Component {
       <div className="item">
         <img src={setImg(img)} alt={name} />
         <div>
-          <h2>{name}</h2>
+          <h4>{name}</h4>
           <p>£{cost}</p>
         </div>
       </div>

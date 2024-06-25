@@ -123,6 +123,7 @@ function AddToCart() {
             </div>
           </div>
         </div>
+        <h2>You might also love these</h2>
         <div
           className="slider_style"
           data-slider="chiefslider"

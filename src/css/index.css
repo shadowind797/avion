@@ -410,7 +410,7 @@ textarea {
 }
 .relative .dropdownBtn {
   border: none;
-  background-color: #fff;
+  background-color: #F9F9F9;
   display: flex;
   vertical-align: middle;
 }
@@ -422,7 +422,7 @@ textarea {
   position: absolute;
   top: 23px;
   left: 6px;
-  background-color: #fff;
+  background-color: #F9F9F9;
   padding: 7px;
 }
 .relative #dropMenu ul {
@@ -520,6 +520,16 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+#products #productsDiv .item div h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#products #productsDiv .item div p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .custom-checkbox {
@@ -680,7 +690,7 @@ textarea {
 #home main .slider__item-content button {
   padding: 16px 32px;
   width: 175px;
-  background-color: #f9f9f9;
+  background-color: #f4f3f3;
   border: none;
   font-size: 16px;
   font-weight: 400;
@@ -985,7 +995,7 @@ textarea {
 #store main #loadMore button {
   padding: 16px 32px;
   width: 175px;
-  background-color: #f9f9f9;
+  background-color: #f4f3f3;
   border: none;
   font-size: 16px;
   font-weight: 400;
@@ -998,6 +1008,7 @@ textarea {
   display: flex;
   gap: 70px;
   justify-content: center;
+  padding-bottom: 111px;
 }
 #addtocart main #cartadd #addImg img {
   width: 607px;
@@ -1079,26 +1090,26 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-top: 40px;
 }
 #addtocart main #cartadd #addInfo #addQuant #calc {
   display: flex;
 }
 #addtocart main #cartadd #addInfo #addQuant #calc div {
-  width: 122px;
+  width: 52px;
   height: 46px;
-  background-color: #fff;
   display: flex;
   justify-content: center;
   padding: 12px 16px;
 }
 #addtocart main #cartadd #addInfo #addQuant #calc div p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 #addtocart main #cartadd #addInfo #addQuant #calc button {
   width: 46px;
   height: 46px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   border: none;
 }
 #addtocart main #cartadd #addInfo #addQuant #calc #minus {
@@ -1112,6 +1123,38 @@ textarea {
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
+}
+#addtocart main #cartadd #add {
+  display: flex;
+  gap: 16px;
+}
+#addtocart main #cartadd #add #addBtn {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #2a254b;
+  color: #fff;
+  border: none;
+}
+#addtocart main #cartadd #add #favSaveBtn {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: #ebe8f4 1px solid;
+}
+#addtocart main h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
+  padding-left: 80px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 #addtocart main .slider__item-content {
   text-align: center;
@@ -1131,7 +1174,7 @@ textarea {
 #addtocart main .slider__item-content button {
   padding: 16px 32px;
   width: 175px;
-  background-color: #f9f9f9;
+  background-color: #f4f3f3;
   border: none;
   font-size: 16px;
   font-weight: 400;
