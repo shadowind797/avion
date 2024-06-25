@@ -28,7 +28,14 @@ server.post(UPDATE_JSON_ENDPOINT, rawParser, (req, res) => {
   });
 });
 server.get(UPDATE_JSON_ENDPOINT, (req, res) => {
-  res.status(400).send("POST requests only!");
+  fs.readFile(UPDATE_JSON_FILE, "utf8", (err, content) => {
+    if (!err) {
+      res.status(200).send(content);
+    } else {
+      console.log(err.toString());
+      res.status(500).send(err.toString());
+    }
+  });
 });
 
 const port = process.env.PORT || DEFAULT_PORT;

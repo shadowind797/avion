@@ -1328,9 +1328,18 @@ textarea {
 }
 #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal {
   display: flex;
+  gap: 288px;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .quantitity {
+  width: 30px;
 }
 #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .totalForItem {
   margin-left: auto;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .totalForItem p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 header {

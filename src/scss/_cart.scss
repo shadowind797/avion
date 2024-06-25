@@ -38,8 +38,17 @@
             }
             .quantTotal {
               display: flex;
+              gap: 288px;
+              .quantitity {
+                width: 30px;
+              }
               .totalForItem {
                 margin-left: auto;
+                p {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 150%;
+                }
               }
             }
           }
