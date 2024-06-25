@@ -1290,6 +1290,49 @@ textarea {
   border: none;
 }
 
+#cart main #mainCartDiv #cartItems .cart-item {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  padding-bottom: 32px;
+}
+#cart main #mainCartDiv #cartItems .cart-item img {
+  width: 109px;
+  height: 134px;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo {
+  display: flex;
+  width: 100%;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .description {
+  width: 232px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .description h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .description p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .description .cost {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal {
+  display: flex;
+}
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .totalForItem {
+  margin-left: auto;
+}
+
 header {
   width: 100%;
 }
