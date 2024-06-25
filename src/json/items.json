@@ -6,7 +6,13 @@
     "cost": 250,
     "collection": "Vivo le France",
     "novetly": 2,
-    "type": "Furniture"
+    "type": "Furniture",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 2,
@@ -15,7 +21,13 @@
     "cost": 155,
     "collection": "Moonlight",
     "novetly": 1,
-    "type": "Homeware"
+    "type": "Homeware",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 3,
@@ -24,7 +36,13 @@
     "cost": 125,
     "collection": "Modern",
     "novetly": 3,
-    "type": "Sofas"
+    "type": "Sofas",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 4,
@@ -33,7 +51,13 @@
     "cost": 399,
     "collection": "Modern",
     "novetly": 3,
-    "type": "Light"
+    "type": "Light",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 5,
@@ -42,7 +66,13 @@
     "cost": 250,
     "collection": "Vivo le France",
     "novetly": 1,
-    "type": "Accesories"
+    "type": "Accesories",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 6,
@@ -51,7 +81,13 @@
     "cost": 155,
     "collection": "Moonlight",
     "novetly": 2,
-    "type": "Accesories"
+    "type": "Accesories",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 7,
@@ -60,7 +96,13 @@
     "cost": 125,
     "collection": "Moonlight",
     "novetly": 1,
-    "type": "Homeware"
+    "type": "Homeware",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 8,
@@ -69,7 +111,13 @@
     "cost": 399,
     "collection": "Modern",
     "novetly": 3,
-    "type": "Furniture"
+    "type": "Furniture",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 9,
@@ -78,7 +126,13 @@
     "cost": 250,
     "collection": "Vivo le France",
     "novetly": 1,
-    "type": "Furniture"
+    "type": "Furniture",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 10,
@@ -87,7 +141,13 @@
     "cost": 155,
     "collection": "Vivo le France",
     "novetly": 1,
-    "type": "Light"
+    "type": "Light",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 11,
@@ -96,7 +156,13 @@
     "cost": 125,
     "collection": "Vivo le France",
     "novetly": 2,
-    "type": "Sofas"
+    "type": "Sofas",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 12,
@@ -105,7 +171,13 @@
     "cost": 399,
     "collection": "Moonlight",
     "novetly": 2,
-    "type": "Furniture"
+    "type": "Furniture",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 13,
@@ -114,7 +186,13 @@
     "cost": 250,
     "collection": "Modern",
     "novetly": 2,
-    "type": "Accesories"
+    "type": "Accesories",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 14,
@@ -123,7 +201,13 @@
     "cost": 155,
     "collection": "Modern",
     "novetly": 3,
-    "type": "Homeware"
+    "type": "Homeware",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 15,
@@ -132,7 +216,13 @@
     "cost": 125,
     "collection": "Moonlight",
     "novetly": 3,
-    "type": "Homeware"
+    "type": "Homeware",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 16,
@@ -141,7 +231,13 @@
     "cost": 399,
     "collection": "Moonlight",
     "novetly": 1,
-    "type": "Furniture"
+    "type": "Furniture",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 17,
@@ -150,7 +246,13 @@
     "cost": 250,
     "collection": "Modern",
     "novetly": 1,
-    "type": "Light"
+    "type": "Light",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 18,
@@ -168,7 +270,13 @@
     "cost": 125,
     "collection": "Moonlight",
     "novetly": 1,
-    "type": "Sofas"
+    "type": "Sofas",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   },
   {
     "id": 20,
@@ -177,6 +285,12 @@
     "cost": 399,
     "collection": "Vivo le France",
     "novetly": 3,
-    "type": "Accesories"
+    "type": "Accesories",
+    "dimensions": {
+      "h": "110cm",
+      "w": "75cm",
+      "d": "50cm"
+    },
+    "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery."
   }
 ]
