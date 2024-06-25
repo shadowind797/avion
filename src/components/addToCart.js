@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Slider from "./slider";
 import Item from "../components/item";
 import jsonItems from "../json/items.json";
+import cartI from "../json/cart.json"
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
@@ -75,6 +76,18 @@ function AddToCart() {
     }
   };
 
+  const [cartItems, setCartItems] = useState(cartI);
+
+  const cartItem = {id: itemId, name: name, description: description, cost: cost, quantitity: quantitity}
+
+  const pushInCart = () => {
+    setCartItems([...cartItems, cartItem])
+    fetch("http://localhost:3001/api/update_cart_items", {
+      method: "POST",
+      body: JSON.stringify([...cartItems, cartItem]),
+    });
+  }
+
   const addProduct = () => {
     setQuantitity(quantitity + 1);
   };
@@ -132,7 +145,7 @@ function AddToCart() {
               </div>
             </div>
             <div id="add">
-              <button id="addBtn">Add to cart</button>
+              <button id="addBtn" onClick={pushInCart}>Add to cart</button>
               <button id="favSaveBtn">Save to favorites</button>
             </div>
           </div>
