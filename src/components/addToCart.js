@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "./header";
@@ -23,6 +23,8 @@ import photo9 from "../img/Photo9.png";
 
 function AddToCart() {
   const { itemId } = useParams();
+
+  const [quantitity, setQuantitity] = useState(1);
 
   useEffect(() => {
     const $slider = document.getElementById("slider");
@@ -73,6 +75,18 @@ function AddToCart() {
     }
   };
 
+  const addProduct = () => {
+    setQuantitity(quantitity + 1);
+  };
+
+  const removeProduct = () => {
+    if (quantitity === 1) {
+      setQuantitity(quantitity);
+    } else {
+      setQuantitity(quantitity - 1);
+    }
+  };
+
   return (
     <div id="addtocart">
       <Header />
@@ -110,11 +124,11 @@ function AddToCart() {
             <div id="addQuant">
               <h3>Quantitity</h3>
               <div id="calc">
-                <button id="minus"></button>
+                <button id="minus" onClick={removeProduct}></button>
                 <div>
-                  <p>1</p>
+                  <p>{quantitity}</p>
                 </div>
-                <button id="plus"></button>
+                <button id="plus" onClick={addProduct}></button>
               </div>
             </div>
             <div id="add">

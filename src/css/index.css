@@ -853,7 +853,7 @@ textarea {
   padding: 16px 32px;
   gap: 10px;
   width: 175px;
-  background-color: #f9f9f9;
+  background-color: #f4f3f3;
   border: none;
   font-size: 16px;
   font-weight: 400;
@@ -895,7 +895,7 @@ textarea {
   padding: 16px 32px;
   gap: 10px;
   width: 175px;
-  background-color: #f9f9f9;
+  background-color: #f4f3f3;
   border: none;
   font-size: 16px;
   font-weight: 400;
@@ -1491,4 +1491,8 @@ body input {
 .container {
   max-width: 1440px;
   margin: auto;
+}
+
+button:hover, a:hover {
+  opacity: 0.6;
 }/*# sourceMappingURL=index.css.map */
