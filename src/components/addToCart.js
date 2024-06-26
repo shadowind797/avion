@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
@@ -26,6 +26,7 @@ function AddToCart() {
   const { itemId } = useParams();
 
   const [quantity, setQuantity] = useState(1);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const serverUrl = "http://localhost:3001/api/update_cart_items";
@@ -34,7 +35,6 @@ function AddToCart() {
       .then((response) => {
         const data = response.data;
         try {
-          console.log(data);
           setCartItems(data);
         } catch (parseError) {
           console.error("Error parsing JSON:", parseError.message);
@@ -61,7 +61,7 @@ function AddToCart() {
 
   const firstFourItems = jsonItems.slice(0, 4);
   const item = jsonItems.find((i) => i.id == itemId);
-  const { img, name, cost, description, dimensions } = item;
+  const { id, img, name, cost, description, dimensions } = item;
 
   const setImg = (img) => {
     if (img === "img/Photo1.png") {
@@ -94,17 +94,37 @@ function AddToCart() {
     }
   };
 
-  const [cartItems, setCartItems] = useState([]);
-
-  const cartItem = {id: itemId, name: name, img: img, description: description, cost: cost, quantity: quantity}
+  const cartItem = {
+    id: itemId,
+    name: name,
+    img: img,
+    description: description,
+    cost: cost,
+    quantity: quantity,
+  };
 
   const pushInCart = () => {
-    setCartItems([...cartItems, cartItem])
+    const updatedCartItems = [...cartItems, cartItem];
+    setCartItems(updatedCartItems);
+  
     fetch("http://localhost:3001/api/update_cart_items", {
       method: "POST",
-      body: JSON.stringify([...cartItems, cartItem]),
+      body: JSON.stringify(updatedCartItems),
+    })
+  };
+
+  const removeFromCart = (idToRemove) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== String(idToRemove));
+    console.log(updatedCartItems)
+    console.log(idToRemove)
+
+    setCartItems(updatedCartItems);
+
+    fetch("http://localhost:3001/api/update_cart_items", {
+      method: "POST",
+      body: JSON.stringify(updatedCartItems),
     });
-  }
+  };
 
   const addProduct = () => {
     setQuantity(quantity + 1);
@@ -120,13 +140,17 @@ function AddToCart() {
 
   const [removeBtn, setRemoveBtn] = useState(false);
 
+  const checkInCart = (itemId) => {
+    return cartItems.some((item) => item.id === itemId);
+  };
+
   return (
     <div id="addtocart">
       <Header />
       <main>
         <div id="cartadd">
           <div id="addImg">
-            <img src={setImg(img)}></img>
+            <img src={setImg(img)} alt="Product" />
           </div>
           <div id="addInfo">
             <div id="addHead">
@@ -155,19 +179,29 @@ function AddToCart() {
               </div>
             </div>
             <div id="addQuant">
-              <h3>Quantitity</h3>
+              <h3>Quantity</h3>
               <div id="calc">
-                <button id="minus" onClick={removeProduct}></button>
+                <button id="minus" onClick={removeProduct}>
+                  -
+                </button>
                 <div>
                   <p>{quantity}</p>
                 </div>
-                <button id="plus" onClick={addProduct}></button>
+                <button id="plus" onClick={addProduct}>
+                  +
+                </button>
               </div>
             </div>
             <div id="add">
-              <button id="addBtn" onClick={pushInCart}>Add to cart</button>
-              <button id="inCartBtn" onMouseOver={setRemoveBtn(true)}>Already in cart</button>
-              <button id="removeBtn">Already in cart</button>
+              <button id="addBtn" onClick={pushInCart}>
+                Add to cart
+              </button>
+              <button id="inCartBtn" onMouseOver={() => setRemoveBtn(true)} style={removeBtn && !checkInCart(id)? {display: "none"} : {display: "block"}}>
+                Already in cart
+              </button>
+              <button id="removeBtn" onMouseLeave={() => setRemoveBtn(false)} onClick={() => removeFromCart(id)} style={removeBtn && !checkInCart(id) ? {display: "block"} : {display: "none"}}>
+                Remove from cart
+              </button>
               <button id="favSaveBtn">Save to favorites</button>
             </div>
           </div>
