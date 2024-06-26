@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
@@ -18,7 +18,7 @@ const Search = () => {
   const [sortSide, setSortSide] = useState({ id: "1", name: "Descending" });
 
   const [items, setItems] = useState(jsonItems);
-  const [filteredItems, setFilteredItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState(jsonItems);
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
@@ -37,6 +37,8 @@ const Search = () => {
   const handleUpdateFilteredItems = (filteredItems) => {
     setFilteredItems(filteredItems);
   };
+
+  console.log(filteredItems)
 
   return (
     <div id="store">

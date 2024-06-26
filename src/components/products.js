@@ -13,6 +13,8 @@ class Products extends Component {
   componentDidMount() {
     const { filters, jsonItems } = this.props;
     const allowedTypes = filters;
+    
+    console.log(jsonItems)
 
     const filteredItems = jsonItems.filter((item) => {
       return (

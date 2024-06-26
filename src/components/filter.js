@@ -33,6 +33,7 @@ class Filter extends React.Component {
     });
     onUpdateFilteredItems(filteredItems);
   };
+  
   render() {
     const { minCost, maxCost } = this.state;
     return (
