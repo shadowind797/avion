@@ -1,6 +1,20 @@
 #cart {
   main {
+    padding: 84px 80px;
     #mainCartDiv {
+      background-color: #fff;
+      padding: 72px 54px 63px;
+      #cartHead {
+        display: flex;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #f9f9f9;
+        margin-bottom: 26px;
+        #quanTotalHead {
+          margin-left: auto;
+          display: flex;
+          gap: 288px;
+        }
+      }
       #cartItems {
         .cart-item {
           display: flex;
@@ -39,7 +53,7 @@
             .quantTotal {
               display: flex;
               gap: 288px;
-              .quantitity {
+              .quantity {
                 width: 30px;
               }
               .totalForItem {
@@ -51,6 +65,44 @@
                 }
               }
             }
+          }
+        }
+      }
+      #cartFoot {
+        display: flex;
+        #taxes {
+          color: #4E4D93;
+        }
+        #checkout {
+          margin-left: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          #subtotal {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            h4 {
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 140%;
+              color: #4E4D93;
+            }
+            h3 {
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 140%;
+            }
+          }
+          #checkoutBtn {
+            display: inline-flex;
+            padding: 16px 32px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #2a254b;
+            color: #fff;
+            border: none;
           }
         }
       }

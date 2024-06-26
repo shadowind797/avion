@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import axios from "axios"
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
 import Item from "../components/item";
 import jsonItems from "../json/items.json";
-import cartI from "../server/json/cart.json"
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
@@ -25,7 +25,25 @@ import photo9 from "../img/Photo9.png";
 function AddToCart() {
   const { itemId } = useParams();
 
-  const [quantitity, setQuantitity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    const serverUrl = "http://localhost:3001/api/update_cart_items";
+    axios
+      .get(serverUrl)
+      .then((response) => {
+        const data = response.data;
+        try {
+          console.log(data);
+          setCartItems(data);
+        } catch (parseError) {
+          console.error("Error parsing JSON:", parseError.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error.message);
+      });
+  }, []);
 
   useEffect(() => {
     const $slider = document.getElementById("slider");
@@ -76,9 +94,9 @@ function AddToCart() {
     }
   };
 
-  const [cartItems, setCartItems] = useState(cartI);
+  const [cartItems, setCartItems] = useState([]);
 
-  const cartItem = {id: itemId, name: name, img: img, description: description, cost: cost, quantitity: quantitity}
+  const cartItem = {id: itemId, name: name, img: img, description: description, cost: cost, quantity: quantity}
 
   const pushInCart = () => {
     setCartItems([...cartItems, cartItem])
@@ -89,16 +107,18 @@ function AddToCart() {
   }
 
   const addProduct = () => {
-    setQuantitity(quantitity + 1);
+    setQuantity(quantity + 1);
   };
 
   const removeProduct = () => {
-    if (quantitity === 1) {
-      setQuantitity(quantitity);
+    if (quantity === 1) {
+      setQuantity(quantity);
     } else {
-      setQuantitity(quantitity - 1);
+      setQuantity(quantity - 1);
     }
   };
+
+  const [removeBtn, setRemoveBtn] = useState(false);
 
   return (
     <div id="addtocart">
@@ -139,13 +159,15 @@ function AddToCart() {
               <div id="calc">
                 <button id="minus" onClick={removeProduct}></button>
                 <div>
-                  <p>{quantitity}</p>
+                  <p>{quantity}</p>
                 </div>
                 <button id="plus" onClick={addProduct}></button>
               </div>
             </div>
             <div id="add">
               <button id="addBtn" onClick={pushInCart}>Add to cart</button>
+              <button id="inCartBtn" onMouseOver={setRemoveBtn(true)}>Already in cart</button>
+              <button id="removeBtn">Already in cart</button>
               <button id="favSaveBtn">Save to favorites</button>
             </div>
           </div>

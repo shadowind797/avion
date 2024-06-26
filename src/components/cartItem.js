@@ -11,8 +11,11 @@ import photo9 from "../img/Photo9.png";
 
 class CartItem extends React.Component {
   render() {
-    const { img, name, cost, description, quantitity } = this.props.item;
+    const { img, name, cost, description, quantity } = this.props.item;
 
+
+    //Dont use PUBLIC_URL because it isnt work with AddToCart component
+    //If u fix it and send me correct code, i will be happy)
     const setImg = (img) => {
       if (img === "img/Photo1.png") {
         const imgPath = photo1;
@@ -54,11 +57,11 @@ class CartItem extends React.Component {
             <p className="cost">£{cost}</p>
           </div>
           <div className="quantTotal">
-            <div className="quantitity">
-              <p>{quantitity}</p>
+            <div className="quantity">
+              <p>{quantity}</p>
             </div>
             <div className="totalForItem">
-                <p>£{cost*quantitity}</p>
+                <p>£{cost*quantity}</p>
             </div>
           </div>
         </div>

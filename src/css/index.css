@@ -1290,6 +1290,24 @@ textarea {
   border: none;
 }
 
+#cart main {
+  padding: 84px 80px;
+}
+#cart main #mainCartDiv {
+  background-color: #fff;
+  padding: 72px 54px 63px;
+}
+#cart main #mainCartDiv #cartHead {
+  display: flex;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f9f9f9;
+  margin-bottom: 26px;
+}
+#cart main #mainCartDiv #cartHead #quanTotalHead {
+  margin-left: auto;
+  display: flex;
+  gap: 288px;
+}
 #cart main #mainCartDiv #cartItems .cart-item {
   display: flex;
   gap: 24px;
@@ -1330,7 +1348,7 @@ textarea {
   display: flex;
   gap: 288px;
 }
-#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .quantitity {
+#cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .quantity {
   width: 30px;
 }
 #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .totalForItem {
@@ -1340,6 +1358,44 @@ textarea {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+}
+#cart main #mainCartDiv #cartFoot {
+  display: flex;
+}
+#cart main #mainCartDiv #cartFoot #taxes {
+  color: #4E4D93;
+}
+#cart main #mainCartDiv #cartFoot #checkout {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#cart main #mainCartDiv #cartFoot #checkout #subtotal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#cart main #mainCartDiv #cartFoot #checkout #subtotal h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #4E4D93;
+}
+#cart main #mainCartDiv #cartFoot #checkout #subtotal h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+#cart main #mainCartDiv #cartFoot #checkout #checkoutBtn {
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #2a254b;
+  color: #fff;
+  border: none;
 }
 
 header {
