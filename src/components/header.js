@@ -1,54 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo1 from "../img/Photo1.png";
-import photo2 from "../img/Photo2.png";
-import photo3 from "../img/Photo3.png";
-import photo4 from "../img/Photo4.png";
-import photo5 from "../img/Photo5.png";
-import photo6 from "../img/Photo6.png";
-import photo7 from "../img/Photo7.png";
-import photo8 from "../img/Photo8.png";
-import photo9 from "../img/Photo9.png";
-
+import items from "../json/items.json";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchShow: false,
+      inputValue: "",
+      filteredData: items,
     };
   }
+
+  handleInputChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    let filtered = items.filter((item) =>
+      item.name.toLowerCase().includes(value)
+    );
+    this.setState({ filteredData: filtered, inputValue: value });
+  };
+
   render() {
-    const setImg = (img) => {
-      if (img === "img/Photo1.png") {
-        const imgPath = photo1;
-        return imgPath;
-      } else if (img === "img/Photo2.png") {
-        const imgPath = photo2;
-        return imgPath;
-      } else if (img === "img/Photo3.png") {
-        const imgPath = photo3;
-        return imgPath;
-      } else if (img === "img/Photo4.png") {
-        const imgPath = photo4;
-        return imgPath;
-      } else if (img === "img/Photo5.png") {
-        const imgPath = photo5;
-        return imgPath;
-      } else if (img === "img/Photo6.png") {
-        const imgPath = photo6;
-        return imgPath;
-      } else if (img === "img/Photo7.png") {
-        const imgPath = photo7;
-        return imgPath;
-      } else if (img === "img/Photo8.png") {
-        const imgPath = photo8;
-        return imgPath;
-      } else if (img === "img/Photo9.png") {
-        const imgPath = photo9;
-        return imgPath;
-      }
-    };
+    const { inputValue, filteredData } = this.state;
     return (
       <header>
         <div id="headerUp">
@@ -110,8 +83,21 @@ class Header extends React.Component {
                 this.setState({ searchShow: false });
               }}
             ></button>
-            <button id="searchBtn">Search</button>
-            <input placeholder="Input furniture name or type"></input>
+            <Link to={`/search/${inputValue}`}>
+              <button
+                id="searchBtn"
+                onClick={() => {
+                  this.setState({ searchShow: false });
+                }}
+              >
+                Search
+              </button>
+            </Link>
+            <input
+              placeholder="Input furniture name or type"
+              value={inputValue}
+              onChange={this.handleInputChange}
+            ></input>
           </div>
         </div>
       </header>
