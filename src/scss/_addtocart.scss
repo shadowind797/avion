@@ -125,15 +125,38 @@
       #add {
         display: flex;
         gap: 16px;
-        #addBtn {
+        #addBtn, #inCartBtn, #removeBtn {
           display: flex;
           padding: 16px 32px;
           justify-content: center;
-          align-items: center;
           gap: 10px;
           background-color: #2a254b;
           color: #fff;
           border: none;
+        }
+        #inCartBtn {
+          background-color: #098000;
+        }
+        #removeBtn {
+          background-color: #cb3131;
+          width: 165px;
+          height: 56px;
+          position: relative;
+          div {
+            display: inline-block;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            background-image: url("../img/remove.svg");
+          }
+          p {
+            display: inline-block;
+            position: relative;
+            bottom: 4px;
+          }
+          &:hover {
+            opacity: 1;
+          }
         }
         #favSaveBtn {
           display: flex;

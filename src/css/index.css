@@ -963,7 +963,7 @@ textarea {
 }
 #store main #storeHead #filterBtn {
   border: none;
-  background-color: #fff;
+  background-color: #F9F9F9;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -1128,15 +1128,38 @@ textarea {
   display: flex;
   gap: 16px;
 }
-#addtocart main #cartadd #add #addBtn {
+#addtocart main #cartadd #add #addBtn, #addtocart main #cartadd #add #inCartBtn, #addtocart main #cartadd #add #removeBtn {
   display: flex;
   padding: 16px 32px;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   background-color: #2a254b;
   color: #fff;
   border: none;
+}
+#addtocart main #cartadd #add #inCartBtn {
+  background-color: #098000;
+}
+#addtocart main #cartadd #add #removeBtn {
+  background-color: #cb3131;
+  width: 165px;
+  height: 56px;
+  position: relative;
+}
+#addtocart main #cartadd #add #removeBtn div {
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/remove.svg");
+}
+#addtocart main #cartadd #add #removeBtn p {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+}
+#addtocart main #cartadd #add #removeBtn:hover {
+  opacity: 1;
 }
 #addtocart main #cartadd #add #favSaveBtn {
   display: flex;

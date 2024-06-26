@@ -106,17 +106,19 @@ function AddToCart() {
   const pushInCart = () => {
     const updatedCartItems = [...cartItems, cartItem];
     setCartItems(updatedCartItems);
-  
+
     fetch("http://localhost:3001/api/update_cart_items", {
       method: "POST",
       body: JSON.stringify(updatedCartItems),
-    })
+    });
   };
 
   const removeFromCart = (idToRemove) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== String(idToRemove));
-    console.log(updatedCartItems)
-    console.log(idToRemove)
+    const updatedCartItems = cartItems.filter(
+      (item) => item.id !== String(idToRemove)
+    );
+    console.log(updatedCartItems);
+    console.log(idToRemove);
 
     setCartItems(updatedCartItems);
 
@@ -181,26 +183,48 @@ function AddToCart() {
             <div id="addQuant">
               <h3>Quantity</h3>
               <div id="calc">
-                <button id="minus" onClick={removeProduct}>
-                  -
-                </button>
+                <button id="minus" onClick={removeProduct}></button>
                 <div>
                   <p>{quantity}</p>
                 </div>
-                <button id="plus" onClick={addProduct}>
-                  +
-                </button>
+                <button id="plus" onClick={addProduct}></button>
               </div>
             </div>
             <div id="add">
-              <button id="addBtn" onClick={pushInCart}>
+              <button
+                id="addBtn"
+                onClick={pushInCart}
+                style={
+                  !checkInCart(itemId)
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
                 Add to cart
               </button>
-              <button id="inCartBtn" onMouseOver={() => setRemoveBtn(true)} style={removeBtn && !checkInCart(id)? {display: "none"} : {display: "block"}}>
+              <button
+                id="inCartBtn"
+                onMouseOver={() => setRemoveBtn(true)}
+                style={
+                  !removeBtn && checkInCart(itemId)
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
                 Already in cart
               </button>
-              <button id="removeBtn" onMouseLeave={() => setRemoveBtn(false)} onClick={() => removeFromCart(id)} style={removeBtn && !checkInCart(id) ? {display: "block"} : {display: "none"}}>
-                Remove from cart
+              <button
+                id="removeBtn"
+                onMouseLeave={() => setRemoveBtn(false)}
+                onClick={() => removeFromCart(id)}
+                style={
+                  removeBtn && checkInCart(itemId)
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
+                <div></div>
+                <p>Remove</p>
               </button>
               <button id="favSaveBtn">Save to favorites</button>
             </div>
