@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Dropdown from "../hooks/dropdown.tsx";
 import Filter from "./filter.js";
 import Products from "./products.js";
+import jsonItems from "../json/items.json";
 import dropdownData from "../json/dropdownSort.json";
 import sortData from "../json/dropdownSortSide.json";
 
@@ -15,6 +16,9 @@ const Search = () => {
   const [filters, setFilters] = useState([]);
   const [sort, setSort] = useState({ id: "1", name: "Cost" });
   const [sortSide, setSortSide] = useState({ id: "1", name: "Descending" });
+
+  const [items, setItems] = useState(jsonItems);
+  const [filteredItems, setFilteredItems] = useState([]);
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
@@ -28,6 +32,10 @@ const Search = () => {
   const handleSortsideSelect = (id) => {
     const selectedItem = sortData.find((item) => item.id === id);
     setSortSide(selectedItem);
+  };
+
+  const handleUpdateFilteredItems = (filteredItems) => {
+    setFilteredItems(filteredItems);
   };
 
   return (
@@ -66,10 +74,21 @@ const Search = () => {
             id="filterDiv"
             style={filterShow ? { display: "block" } : { display: "none" }}
           >
-            <Filter filters={filters} onChange={handleFilterChange} />
+            <Filter
+              filters={filters}
+              onChange={handleFilterChange}
+              items={items}
+              onUpdateFilteredItems={handleUpdateFilteredItems}
+            />
           </div>
           <div id="products">
-            <Products filters={filters} sort={sort} sortSide={sortSide} search={searchStr} />
+            <Products
+              filters={filters}
+              sort={sort}
+              sortSide={sortSide}
+              search={searchStr}
+              jsonItems={filteredItems}
+            />
           </div>
         </div>
         <div id="loadMore">

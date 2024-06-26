@@ -4,6 +4,7 @@ import Footer from "./footer";
 import Dropdown from "../hooks/dropdown.tsx";
 import Filter from "./filter.js";
 import Products from "./products.js";
+import jsonItems from "../json/items.json";
 import dropdownData from "../json/dropdownSort.json";
 import sortData from "../json/dropdownSortSide.json";
 
@@ -21,6 +22,8 @@ class Store extends React.Component {
         id: "1",
         name: "Descending",
       },
+      items: [],
+      filteredItems: [],
     };
   }
   handleFilterChange = (newFilters) => {
@@ -33,7 +36,10 @@ class Store extends React.Component {
   handleSortsideSelect = (id) => {
     const selectedItem = sortData.find((item) => item.id === id);
     this.setState({ sortSide: selectedItem });
+  };
 
+  handleUpdateFilteredItems = (filteredItems) => {
+    this.setState({ filteredItems }); // Обновляем состояние с отфильтрованными объектами
   };
   render() {
     return (
@@ -86,6 +92,8 @@ class Store extends React.Component {
               <Filter
                 filters={this.state.filters}
                 onChange={this.handleFilterChange}
+                items={this.state.items}
+                onUpdateFilteredItems={this.handleUpdateFilteredItems}
               />
             </div>
             <div id="products">
@@ -93,6 +101,7 @@ class Store extends React.Component {
                 filters={this.state.filters}
                 sort={this.state.sort}
                 sortSide={this.state.sortSide}
+                jsonItems={jsonItems}
               />
             </div>
           </div>

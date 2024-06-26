@@ -3,11 +3,38 @@ import React from "react";
 class Filter extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      minCost: "",
+      maxCost: "",
+    };
   }
   handleChange = (newFilters) => {
     this.props.onChange(newFilters);
   };
+
+  handleMinCostChange = (e) => {
+    this.setState({ minCost: e.target.value });
+    this.updateFilteredItems(e.target.value, this.state.maxCost);
+  };
+
+  handleMaxCostChange = (e) => {
+    this.setState({ maxCost: e.target.value });
+    this.updateFilteredItems(this.state.minCost, e.target.value);
+  };
+
+  updateFilteredItems = (minCost, maxCost) => {
+    const { items, onUpdateFilteredItems } = this.props;
+    const filteredItems = items.filter((item) => {
+      const cost = item.cost;
+      return (
+        (minCost === "" || cost >= parseFloat(minCost)) &&
+        (maxCost === "" || cost <= parseFloat(maxCost))
+      );
+    });
+    onUpdateFilteredItems(filteredItems);
+  };
   render() {
+    const { minCost, maxCost } = this.state;
     return (
       <div id="filter">
         <div className="filterSection">
@@ -102,14 +129,20 @@ class Filter extends React.Component {
               <p>From:</p>
               <div className="input">
                 <p>£</p>
-                <input></input>
+                <input
+                  value={minCost}
+                  onChange={this.handleMinCostChange}
+                ></input>
               </div>
             </div>
             <div>
               <p>To:</p>
               <div className="input">
                 <p>£</p>
-                <input></input>
+                <input
+                  value={maxCost}
+                  onChange={this.handleMaxCostChange}
+                ></input>
               </div>
             </div>
           </div>

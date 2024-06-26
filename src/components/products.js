@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Item from "./item";
-import jsonItems from "../json/items.json";
 
 class Products extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Products extends Component {
   }
 
   componentDidMount() {
-    const { filters } = this.props;
+    const { filters, jsonItems } = this.props;
     const allowedTypes = filters;
 
     const filteredItems = jsonItems.filter((item) => {
@@ -22,19 +21,25 @@ class Products extends Component {
       );
     });
 
-    const itemsToRender =
+    let itemsToRender =
       filters.length > 0 ? filteredItems.slice(0, 12) : jsonItems.slice(0, 12);
     const value = this.props.search;
-    const searched = itemsToRender.filter((item) =>
-      item.name.toLowerCase().includes(value)
-    );
-    this.setState({ itemsToRender: searched });
+
+    if (this.props.search) {
+      const searched = itemsToRender.filter((item) =>
+        item.name.toLowerCase().includes(value.split(" ")[0])
+      );
+      const moreSearched = searched.filter((item) =>
+        item.name.toLowerCase().includes(value.split(" ")[1])
+      );
+      itemsToRender = moreSearched;
+    }
 
     this.setState({ itemsToRender });
   }
 
   render() {
-    const { filters, sort, sortSide } = this.props;
+    const { sort, sortSide } = this.props;
     const { itemsToRender } = this.state;
 
     if (sort.name === "Cost" && sortSide.name === "Descending") {
@@ -42,9 +47,9 @@ class Products extends Component {
     } else if (sort.name === "Cost" && sortSide.name === "Ascending") {
       itemsToRender.sort((a, b) => a.cost - b.cost);
     } else if (sort.name === "Novelty" && sortSide.name === "Descending") {
-      itemsToRender.sort((a, b) => b.novelty - a.novelty);
+      itemsToRender.sort((a, b) => b.novetly - a.novetly);
     } else if (sort.name === "Novelty" && sortSide.name === "Ascending") {
-      itemsToRender.sort((a, b) => a.novelty - b.novelty);
+      itemsToRender.sort((a, b) => a.novetly - b.novetly);
     } else if (sort.name === "Name" && sortSide.name === "Descending") {
       itemsToRender.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sort.name === "Name" && sortSide.name === "Ascending") {

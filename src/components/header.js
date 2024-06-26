@@ -83,7 +83,7 @@ class Header extends React.Component {
                 this.setState({ searchShow: false });
               }}
             ></button>
-            <Link to={`/search/${inputValue}`}>
+            <Link to={`/store/search/${inputValue}`}>
               <button
                 id="searchBtn"
                 onClick={() => {
