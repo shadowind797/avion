@@ -99,6 +99,7 @@ class Header extends React.Component {
                 onChange={this.handleInputChange}
                 id="search"
                 ref={this.searchInputRef}
+                autocomplete="off"
               ></input>
               <Link to={`/store/search/${inputValue}`}>
                 <button

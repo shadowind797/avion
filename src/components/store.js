@@ -106,15 +106,23 @@ class Store extends React.Component {
         const moreSearched = searched.filter((item) =>
           item.name.toLowerCase().includes(value.split(" ")[1])
         );
-        afterSearch = moreSearched;
+        const thirdSearched = jsonItems.filter((item) =>
+          item.name.toLowerCase().includes(value.split(" ")[1])
+        );
+
+        console.log(thirdSearched);
+
+        if (moreSearched.length === 0) {
+          afterSearch = searched;
+        }
+        if (searched.length === 0) {
+          afterSearch = thirdSearched;
+        }
       } else {
         const searched = jsonItems.filter((item) =>
           item.name.toLowerCase().includes(value)
         );
-        const moreSearched = searched.filter((item) =>
-          item.name.toLowerCase().includes(value)
-        );
-        afterSearch = moreSearched;
+        afterSearch = searched;
       }
     }
 
