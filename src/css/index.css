@@ -498,15 +498,16 @@ textarea {
 }
 
 #products {
-  margin: auto;
+  margin-left: auto;
+  margin-right: 140px;
 }
 #products #productsDiv {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 1440px;
-  margin: auto;
+  margin-right: auto;
 }
 #products #productsDiv .item {
   text-align: left;

@@ -1,12 +1,13 @@
 #products {
-  margin: auto;
+  margin-left: auto;
+  margin-right: 140px;
   #productsDiv {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 1440px;
-    margin: auto;
+    margin-right: auto;
     .item {
       text-align: left;
       display: flex;
