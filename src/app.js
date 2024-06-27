@@ -17,7 +17,7 @@ export default function App() {
           <Route exact path="/store" element={<Store />} />
           <Route exact path="/addtocart/:itemId" element={<AddToCart />} />
           <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/store/search/:searchStr" element={<Search />} />
+          <Route exact path="/store/search/:search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>
