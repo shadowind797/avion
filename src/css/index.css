@@ -1430,14 +1430,17 @@ header #searchInput {
   right: 23px;
   top: 68px;
 }
-header #searchInput input {
+header #searchInput form {
+  display: flex;
+}
+header #searchInput form input {
   width: 308px;
   height: 44px;
   color: white;
   background-color: #000;
   opacity: 0.2;
 }
-header #searchInput #searchBtn {
+header #searchInput form #searchBtn {
   width: 112px;
   height: 50px;
   color: #fff;

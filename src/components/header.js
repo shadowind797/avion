@@ -10,6 +10,21 @@ class Header extends React.Component {
       inputValue: "",
       filteredData: items,
     };
+    this.searchInputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    if (this.state.searchShow) {
+      this.searchInputRef.current.focus();
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.searchShow !== prevState.searchShow) {
+      if (this.state.searchShow) {
+        this.searchInputRef.current.focus();
+      }
+    }
   }
 
   handleInputChange = (e) => {
@@ -21,7 +36,7 @@ class Header extends React.Component {
   };
 
   render() {
-    const { inputValue, filteredData } = this.state;
+    const { inputValue } = this.state;
     return (
       <header>
         <div id="headerUp">
@@ -77,27 +92,32 @@ class Header extends React.Component {
                 : { display: "flex" }
             }
           >
+            <form>
+              <input
+                placeholder="Search by name"
+                value={inputValue}
+                onChange={this.handleInputChange}
+                id="search"
+                ref={this.searchInputRef}
+              ></input>
+              <Link to={`/store/search/${inputValue}`}>
+                <button
+                  type="submit"
+                  id="searchBtn"
+                  onClick={() => {
+                    this.setState({ searchShow: false });
+                  }}
+                >
+                  Search
+                </button>
+              </Link>
+            </form>
             <button
               id="closeSearch"
               onClick={() => {
                 this.setState({ searchShow: false });
               }}
             ></button>
-            <Link to={`/store/search/${inputValue}`}>
-              <button
-                id="searchBtn"
-                onClick={() => {
-                  this.setState({ searchShow: false });
-                }}
-              >
-                Search
-              </button>
-            </Link>
-            <input
-              placeholder="Input furniture name or type"
-              value={inputValue}
-              onChange={this.handleInputChange}
-            ></input>
           </div>
         </div>
       </header>

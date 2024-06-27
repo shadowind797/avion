@@ -280,7 +280,7 @@ class Store extends React.Component {
                       ></input>
                       <p>Modern</p>
                     </li>
-                    <li onClick={() => this.filterChange("Vivo le france")}>
+                    <li onClick={() => this.filterChange("Vivo le France")}>
                       <input
                         type="checkbox"
                         className="custom-checkbox"
