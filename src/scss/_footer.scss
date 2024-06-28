@@ -12,6 +12,17 @@ footer {
       display: flex;
       gap: 120px;
       padding-right: 110px;
+
+      @media (max-width: 1380px) {
+        padding-right: 55px;
+      }
+      @media (max-width: 1330px) {
+        padding-right: 0;
+      }
+      @media (max-width: 1274px) {
+        flex-wrap: wrap;
+        gap: 60px;
+      }
       div {
         display: flex;
         flex-direction: column;
@@ -36,6 +47,9 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      @media (max-width: 1580px) {
+        margin-left: 150px;
+      }
       h3 {
         font-size: 16px;
         font-weight: 400;
@@ -43,13 +57,17 @@ footer {
       div {
         display: flex;
         input {
-          padding: 17px 360px 17px 32px;
+          padding: 17px 32px 17px 32px;
+          width: 360px;
           flex: 1 0 0;
           background-color: rgba(255, 255, 255, 0.15);
           border: none;
           font-size: 16px;
           font-weight: 400;
           color: #fff;
+          @media (max-width: 1580px) {
+            width: 244px;
+          }
         }
         button {
           display: flex;
@@ -69,7 +87,6 @@ footer {
     display: flex;
     justify-content: flex-start;
     #copy {
-      padding-right: 849px;
       p {
         font-size: 14px;
         font-weight: 400;

@@ -5,18 +5,25 @@ header {
     width: 504px;
     right: 23px;
     top: 68px;
+    @media (max-width: 1750px) {
+      top: 130px;
+    }
     form {
       display: flex;
       input {
         width: 308px;
-        height: 44px;
+        height: 46px;
         color: white;
         background-color: #000;
         opacity: 0.2;
+        border: none;
+        @media (max-width: 1750px) {
+          opacity: 1;
+        }
       }
       #searchBtn {
         width: 112px;
-        height: 50px;
+        height: 48px;
         color: #fff;
         background: #1e193e;
         border: none;
@@ -24,7 +31,7 @@ header {
     }
     #closeSearch {
       width: 84px;
-      height: 50px;
+      height: 48px;
       background-image: url("../img/close.svg");
       background-color: #8c9595;
       background-repeat: no-repeat;

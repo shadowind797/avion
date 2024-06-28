@@ -499,7 +499,108 @@ textarea {
 
 #products {
   margin-left: auto;
-  margin-right: 140px;
+  margin-right: 160px;
+}
+@media (max-width: 1800px) {
+  #products {
+    margin-right: 110px;
+  }
+}
+@media (max-width: 1700px) {
+  #products {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 1600px) {
+  #products {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1580px) {
+  #products {
+    margin-right: 160px;
+  }
+}
+@media (max-width: 1500px) {
+  #products {
+    margin-right: 110px;
+  }
+}
+@media (max-width: 1400px) {
+  #products {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 1300px) {
+  #products {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1280px) {
+  #products {
+    margin-right: 0;
+    margin-left: 168px;
+  }
+}
+@media (max-width: 1230px) {
+  #products {
+    margin-left: 138px;
+  }
+}
+@media (max-width: 1190px) {
+  #products {
+    margin-left: 115px;
+  }
+}
+@media (max-width: 1140px) {
+  #products {
+    margin-left: 90px;
+  }
+}
+@media (max-width: 1090px) {
+  #products {
+    margin-left: 110px;
+  }
+}
+@media (max-width: 1070px) {
+  #products {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 1040px) {
+  #products {
+    margin-left: 85px;
+  }
+}
+@media (min-width: 2000px) {
+  #products {
+    margin-right: 240px;
+  }
+}
+@media (min-width: 2100px) {
+  #products {
+    margin-right: 290px;
+  }
+}
+@media (min-width: 2200px) {
+  #products {
+    margin-right: 340px;
+  }
+}
+@media (min-width: 2300px) {
+  #products {
+    margin-right: 390px;
+  }
+}
+@media (min-width: 2400px) {
+  #products {
+    margin-right: 440px;
+  }
+}
+@media (min-width: 2560px) {
+  #products {
+    margin-right: 520px;
+  }
 }
 #products #productsDiv {
   display: flex;
@@ -509,6 +610,11 @@ textarea {
   max-width: 1440px;
   margin-right: auto;
 }
+@media (max-width: 1580px) {
+  #products #productsDiv {
+    max-width: 1152px;
+  }
+}
 #products #productsDiv .item {
   text-align: left;
   display: flex;
@@ -516,6 +622,21 @@ textarea {
   gap: 24px;
   padding-bottom: 50px;
   cursor: pointer;
+}
+@media (max-width: 1580px) {
+  #products #productsDiv .item {
+    width: 244px;
+  }
+}
+@media (max-width: 1280px) {
+  #products #productsDiv .item {
+    width: 220px;
+  }
+}
+@media (max-width: 1090px) {
+  #products #productsDiv .item {
+    width: 198px;
+  }
 }
 #products #productsDiv .item div {
   display: flex;
@@ -946,7 +1067,7 @@ textarea {
 
 #store main #storeTitle {
   color: #fff;
-  padding: 123px 1154px 36px 80px;
+  padding: 123px 80px 36px 80px;
   background-image: url("../img/storeTitleBg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1332,6 +1453,11 @@ textarea {
   display: flex;
   gap: 288px;
 }
+@media (max-width: 1270px) {
+  #cart main #mainCartDiv #cartHead #quanTotalHead {
+    gap: 130px;
+  }
+}
 #cart main #mainCartDiv #cartItems .cart-item {
   display: flex;
   gap: 24px;
@@ -1371,6 +1497,11 @@ textarea {
 #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal {
   display: flex;
   gap: 288px;
+}
+@media (max-width: 1270px) {
+  #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal {
+    gap: 130px;
+  }
 }
 #cart main #mainCartDiv #cartItems .cart-item .cartItemInfo .quantTotal .quantity {
   width: 30px;
@@ -1431,26 +1562,37 @@ header #searchInput {
   right: 23px;
   top: 68px;
 }
+@media (max-width: 1750px) {
+  header #searchInput {
+    top: 130px;
+  }
+}
 header #searchInput form {
   display: flex;
 }
 header #searchInput form input {
   width: 308px;
-  height: 44px;
+  height: 46px;
   color: white;
   background-color: #000;
   opacity: 0.2;
+  border: none;
+}
+@media (max-width: 1750px) {
+  header #searchInput form input {
+    opacity: 1;
+  }
 }
 header #searchInput form #searchBtn {
   width: 112px;
-  height: 50px;
+  height: 48px;
   color: #fff;
   background: #1e193e;
   border: none;
 }
 header #searchInput #closeSearch {
   width: 84px;
-  height: 50px;
+  height: 48px;
   background-image: url("../img/close.svg");
   background-color: #8c9595;
   background-repeat: no-repeat;
@@ -1530,6 +1672,22 @@ footer #footerUp #links {
   gap: 120px;
   padding-right: 110px;
 }
+@media (max-width: 1380px) {
+  footer #footerUp #links {
+    padding-right: 55px;
+  }
+}
+@media (max-width: 1330px) {
+  footer #footerUp #links {
+    padding-right: 0;
+  }
+}
+@media (max-width: 1274px) {
+  footer #footerUp #links {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
 footer #footerUp #links div {
   display: flex;
   flex-direction: column;
@@ -1554,6 +1712,11 @@ footer #footerUp #joinMail {
   flex-direction: column;
   gap: 16px;
 }
+@media (max-width: 1580px) {
+  footer #footerUp #joinMail {
+    margin-left: 150px;
+  }
+}
 footer #footerUp #joinMail h3 {
   font-size: 16px;
   font-weight: 400;
@@ -1562,13 +1725,19 @@ footer #footerUp #joinMail div {
   display: flex;
 }
 footer #footerUp #joinMail div input {
-  padding: 17px 360px 17px 32px;
+  padding: 17px 32px 17px 32px;
+  width: 360px;
   flex: 1 0 0;
   background-color: rgba(255, 255, 255, 0.15);
   border: none;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+}
+@media (max-width: 1580px) {
+  footer #footerUp #joinMail div input {
+    width: 244px;
+  }
 }
 footer #footerUp #joinMail div button {
   display: flex;
@@ -1584,9 +1753,6 @@ footer #footerDown {
   padding: 25px 80px;
   display: flex;
   justify-content: flex-start;
-}
-footer #footerDown #copy {
-  padding-right: 849px;
 }
 footer #footerDown #copy p {
   font-size: 14px;

@@ -13,6 +13,9 @@
           margin-left: auto;
           display: flex;
           gap: 288px;
+          @media (max-width: 1270px) {
+            gap: 130px;
+          }
         }
       }
       #cartItems {
@@ -53,6 +56,9 @@
             .quantTotal {
               display: flex;
               gap: 288px;
+              @media (max-width: 1270px) {
+                gap: 130px;
+              }
               .quantity {
                 width: 30px;
               }

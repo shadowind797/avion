@@ -15,7 +15,7 @@ class Store extends React.Component {
       filterShow: false,
       filters: [],
       itemsToRender: [],
-      jsonItems: jsonItems.slice(0, 12),
+      jsonItems: jsonItems,
       sort: {
         id: "1",
         name: "Cost",
@@ -110,8 +110,6 @@ class Store extends React.Component {
           item.name.toLowerCase().includes(value.split(" ")[1])
         );
 
-        console.log(thirdSearched);
-
         if (moreSearched.length === 0) {
           afterSearch = searched;
         }
@@ -132,8 +130,8 @@ class Store extends React.Component {
 
     const postFilter =
       filters.length > 0
-        ? filteredItems.slice(0, 12)
-        : afterSearch.slice(0, 12);
+        ? filteredItems
+        : afterSearch;
 
     const filtered = postFilter.filter((item) => {
       const cost = item.cost;
@@ -161,6 +159,7 @@ class Store extends React.Component {
       );
     }
 
+    const lastList = filtered.slice(0, 12)
     return (
       <div id="store">
         <Header />
@@ -301,7 +300,7 @@ class Store extends React.Component {
             </div>
             <div id="products">
               <div id="productsDiv">
-                {filtered.map((item) => (
+                {lastList.map((item) => (
                   <Link key={item.id} to={`/addtocart/${item.id}`}>
                     <Item item={item} updateItemId={this.updateItemId} />
                   </Link>
