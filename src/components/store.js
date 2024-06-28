@@ -4,9 +4,9 @@ import Header from "./header";
 import Footer from "./footer";
 import Dropdown from "../hooks/dropdown.tsx";
 import Item from "./item";
-import jsonItems from "../json/items.json";
 import dropdownData from "../json/dropdownSort.json";
 import sortData from "../json/dropdownSortSide.json";
+import axios from "axios";
 
 class Store extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Store extends React.Component {
       filterShow: false,
       filters: [],
       itemsToRender: [],
-      jsonItems: jsonItems,
+      jsonItems: [],
       sort: {
         id: "1",
         name: "Cost",
@@ -77,61 +77,36 @@ class Store extends React.Component {
     }
   };
 
-  componentDidMount() {
-    const { jsonItems } = this.state;
+  async fetchData() {
+    try {
+      const serverUrl = "http://localhost:3002/api/items";
+      const response = await axios.get(`${serverUrl}`, {
+        params: {
+          text: this.props.search,
+        },
+      });
 
-    const value = this.props.search;
-    if (this.props.search) {
-      const searched = jsonItems.filter((item) =>
-        item.name.toLowerCase().includes(value.split(" ")[0])
-      );
-      const moreSearched = searched.filter((item) =>
-        item.name.toLowerCase().includes(value.split(" ")[1])
-      );
-      this.setState({ itemsToRender: moreSearched });
+      const data = response.data;
+      this.setState({jsonItems: data})
+      return data;
+    } catch (error) {
+      console.error("Ошибка при выполнении GET-запроса:", error.message);
+      throw error;
     }
   }
 
   render() {
+    this.fetchData();
     const { sort, sortSide, minCost, maxCost } = this.state;
     const { filters, jsonItems } = this.state;
 
     let afterSearch = jsonItems;
-    const value = this.props.search;
-    if (this.props.search) {
-      if (value.includes(" ")) {
-        const searched = jsonItems.filter((item) =>
-          item.name.toLowerCase().includes(value.split(" ")[0])
-        );
-        const moreSearched = searched.filter((item) =>
-          item.name.toLowerCase().includes(value.split(" ")[1])
-        );
-        const thirdSearched = jsonItems.filter((item) =>
-          item.name.toLowerCase().includes(value.split(" ")[1])
-        );
-
-        if (moreSearched.length === 0) {
-          afterSearch = searched;
-        }
-        if (searched.length === 0) {
-          afterSearch = thirdSearched;
-        }
-      } else {
-        const searched = jsonItems.filter((item) =>
-          item.name.toLowerCase().includes(value)
-        );
-        afterSearch = searched;
-      }
-    }
 
     const filteredItems = afterSearch.filter((item) => {
       return filters.includes(item.type) || filters.includes(item.collection);
     });
 
-    const postFilter =
-      filters.length > 0
-        ? filteredItems
-        : afterSearch;
+    const postFilter = filters.length > 0 ? filteredItems : afterSearch;
 
     const filtered = postFilter.filter((item) => {
       const cost = item.cost;
@@ -159,7 +134,7 @@ class Store extends React.Component {
       );
     }
 
-    const lastList = filtered.slice(0, 12)
+    const lastList = filtered.slice(0, 12);
     return (
       <div id="store">
         <Header />
