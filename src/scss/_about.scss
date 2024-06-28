@@ -14,11 +14,21 @@
     #aboutPar1 {
       display: flex;
       justify-content: flex-start;
+      img {
+        @media (max-width: 1310px) {
+          width: 612px;
+        }
+        @media (max-width: 1150px) {
+          width: 520px;
+        }
+      }
       #aboutPar1Text {
         padding: 72px 100px 54px 84px;
         display: flex;
         flex-direction: column;
-        gap: 196px;
+        @media (max-width: 1310px) {
+          padding-right: 70px;
+        }
         #aboutInfo1 {
           display: flex;
           flex-direction: column;
@@ -27,6 +37,10 @@
             font-size: 24px;
             font-weight: 400;
             line-height: 140%;
+            @media (max-width: 1150px) {
+              font-size: 21px;
+              line-height: 120%;
+            }
           }
           div {
             display: flex;
@@ -35,6 +49,10 @@
             p {
               font-size: 16px;
               font-weight: 400;
+              @media (max-width: 1150px) {
+                font-size: 15px;
+                line-height: 120%;
+              }
             }
           }
         }
@@ -51,16 +69,27 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 150%;
+        margin-top: auto;
       }
     }
     #aboutPar2 {
       display: flex;
       justify-content: flex-start;
+      img {
+        @media (max-width: 1310px) {
+          width: 612px;
+        }
+        @media (max-width: 1150px) {
+          width: 520px;
+        }
+      }
       #aboutPar2Text {
         padding: 72px 100px 54px 84px;
         display: flex;
         flex-direction: column;
-        gap: 196px;
+        @media (max-width: 1310px) {
+          padding-right: 70px;
+        }
         #aboutInfo2 {
           display: flex;
           flex-direction: column;
@@ -69,6 +98,10 @@
             font-size: 24px;
             font-weight: 400;
             line-height: 140%;
+            @media (max-width: 1150px) {
+              font-size: 21px;
+              line-height: 120%;
+            }
           }
           div {
             display: flex;
@@ -77,6 +110,10 @@
             p {
               font-size: 16px;
               font-weight: 400;
+              @media (max-width: 1150px) {
+                font-size: 15px;
+                line-height: 120%;
+              }
             }
           }
         }
@@ -93,6 +130,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 150%;
+        margin-top: auto;
       }
     }
     #plusesOfBrand {

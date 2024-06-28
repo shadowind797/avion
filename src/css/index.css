@@ -805,11 +805,25 @@ textarea {
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 1310px) {
+  #about main #aboutPar1 img {
+    width: 612px;
+  }
+}
+@media (max-width: 1150px) {
+  #about main #aboutPar1 img {
+    width: 520px;
+  }
+}
 #about main #aboutPar1 #aboutPar1Text {
   padding: 72px 100px 54px 84px;
   display: flex;
   flex-direction: column;
-  gap: 196px;
+}
+@media (max-width: 1310px) {
+  #about main #aboutPar1 #aboutPar1Text {
+    padding-right: 70px;
+  }
 }
 #about main #aboutPar1 #aboutPar1Text #aboutInfo1 {
   display: flex;
@@ -821,6 +835,12 @@ textarea {
   font-weight: 400;
   line-height: 140%;
 }
+@media (max-width: 1150px) {
+  #about main #aboutPar1 #aboutPar1Text #aboutInfo1 h2 {
+    font-size: 21px;
+    line-height: 120%;
+  }
+}
 #about main #aboutPar1 #aboutPar1Text #aboutInfo1 div {
   display: flex;
   flex-direction: column;
@@ -829,6 +849,12 @@ textarea {
 #about main #aboutPar1 #aboutPar1Text #aboutInfo1 div p {
   font-size: 16px;
   font-weight: 400;
+}
+@media (max-width: 1150px) {
+  #about main #aboutPar1 #aboutPar1Text #aboutInfo1 div p {
+    font-size: 15px;
+    line-height: 120%;
+  }
 }
 #about main #aboutPar1 #aboutImg1 {
   margin-left: auto;
@@ -842,16 +868,31 @@ textarea {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  margin-top: auto;
 }
 #about main #aboutPar2 {
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 1310px) {
+  #about main #aboutPar2 img {
+    width: 612px;
+  }
+}
+@media (max-width: 1150px) {
+  #about main #aboutPar2 img {
+    width: 520px;
+  }
+}
 #about main #aboutPar2 #aboutPar2Text {
   padding: 72px 100px 54px 84px;
   display: flex;
   flex-direction: column;
-  gap: 196px;
+}
+@media (max-width: 1310px) {
+  #about main #aboutPar2 #aboutPar2Text {
+    padding-right: 70px;
+  }
 }
 #about main #aboutPar2 #aboutPar2Text #aboutInfo2 {
   display: flex;
@@ -863,6 +904,12 @@ textarea {
   font-weight: 400;
   line-height: 140%;
 }
+@media (max-width: 1150px) {
+  #about main #aboutPar2 #aboutPar2Text #aboutInfo2 h2 {
+    font-size: 21px;
+    line-height: 120%;
+  }
+}
 #about main #aboutPar2 #aboutPar2Text #aboutInfo2 div {
   display: flex;
   flex-direction: column;
@@ -871,6 +918,12 @@ textarea {
 #about main #aboutPar2 #aboutPar2Text #aboutInfo2 div p {
   font-size: 16px;
   font-weight: 400;
+}
+@media (max-width: 1150px) {
+  #about main #aboutPar2 #aboutPar2Text #aboutInfo2 div p {
+    font-size: 15px;
+    line-height: 120%;
+  }
 }
 #about main #aboutPar2 #aboutImg2 {
   margin-right: auto;
@@ -884,6 +937,7 @@ textarea {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  margin-top: auto;
 }
 #about main #plusesOfBrand {
   padding-top: 80px;
