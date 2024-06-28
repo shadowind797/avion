@@ -27,12 +27,14 @@ server.get(ENDPOINT, (req, res) => {
             item.name.toLowerCase().includes(text.split(" ")[1])
           );
 
-          if (moreSearched.length === 0) {
-            const afterSearch = searched;
-            res.status(200).json(afterSearch);
-          }
           if (searched.length === 0) {
             const afterSearch = thirdSearched;
+            res.status(200).json(afterSearch);
+          } else if (moreSearched.length === 0) {
+            const afterSearch = searched;
+            res.status(200).json(afterSearch);
+          } else {
+            const afterSearch = moreSearched;
             res.status(200).json(afterSearch);
           }
         } else {
@@ -42,8 +44,7 @@ server.get(ENDPOINT, (req, res) => {
           const afterSearch = searched;
           res.status(200).json(afterSearch);
         }
-      }
-      else {
+      } else {
         res.status(200).json(items);
       }
     } else {

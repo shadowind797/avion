@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import items from "../json/items.json";
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,7 +7,6 @@ class Header extends React.Component {
     this.state = {
       searchShow: false,
       inputValue: "",
-      filteredData: items,
     };
     this.searchInputRef = React.createRef();
   }
@@ -29,10 +27,7 @@ class Header extends React.Component {
 
   handleInputChange = (e) => {
     const value = e.target.value.toLowerCase();
-    let filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(value)
-    );
-    this.setState({ filteredData: filtered, inputValue: value });
+    this.setState({ inputValue: value });
   };
 
   render() {
@@ -99,7 +94,7 @@ class Header extends React.Component {
                 onChange={this.handleInputChange}
                 id="search"
                 ref={this.searchInputRef}
-                autocomplete="off"
+                autoComplete="off"
               ></input>
               <Link to={`/store/search/${inputValue}`}>
                 <button

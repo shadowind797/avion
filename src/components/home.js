@@ -1,10 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import axios from "axios";
+import { Link } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
 import Item from "../components/item";
-import jsonItems from "../json/items.json";
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
@@ -15,6 +15,26 @@ import sartedColection from "../img/ImageBlock.png";
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      jsonItems: []
+    }
+  }
+  async componentDidMount() {
+    try {
+      const serverUrl = "http://localhost:3002/api/items";
+      const response = await axios.get(serverUrl, {
+        params: {
+          text: this.props.search,
+        },
+      });
+
+      const data = response.data;
+      console.log(data);
+      this.setState({ jsonItems: data });
+    } catch (error) {
+      console.error("Ошибка при выполнении GET-запроса:", error.message);
+      throw error;
+    }
   }
   componentDidMount() {
     const $slider = document.getElementById("slider");
@@ -30,6 +50,7 @@ class Home extends React.Component {
     }
   }
   render() {
+    const { jsonItems } = this.state;
     const firstFourItems = jsonItems.slice(0, 4);
     return (
       <div id="home">

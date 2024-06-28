@@ -6,7 +6,6 @@ import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
 import Item from "../components/item";
-import jsonItems from "../json/items.json";
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
 import purschase from "../img/Purchase.svg";
@@ -27,6 +26,20 @@ function AddToCart() {
 
   const [quantity, setQuantity] = useState(1);
   const [cartItems, setCartItems] = useState([]);
+  const [jsonItems, setJsonItems] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const serverUrl = "http://localhost:3002/api/items";
+      const response = await axios.get(serverUrl);
+
+      const data = response.data;
+      setJsonItems(data);
+    } catch (error) {
+      console.error("Error while GET-request:", error.message);
+    }
+  };
+  fetchData();
 
   useEffect(() => {
     const serverUrl = "http://localhost:3001/api/update_cart_items";
