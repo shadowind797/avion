@@ -75,37 +75,5 @@
     @media (max-width: 1580px) {
       max-width: 1152px;
     }
-    .item {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding-bottom: 50px;
-      cursor: pointer;
-      @media (max-width: 1580px) {
-        width: 244px;
-      }
-      @media (max-width: 1280px) {
-        width: 220px;
-      }
-      @media (max-width: 1090px) {
-        width: 198px;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        h4 {
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 140%;
-        }
-        p {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 150%;
-        }
-      }
-    }
   }
 }

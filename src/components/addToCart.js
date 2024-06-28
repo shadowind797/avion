@@ -226,7 +226,9 @@ function AddToCart() {
                 <div></div>
                 <p>Remove</p>
               </button>
-              <button id="favSaveBtn">Save to favorites</button>
+              <button id="favSaveBtn">
+                <p>Save to favorites</p>
+              </button>
             </div>
           </div>
         </div>

@@ -10,6 +10,14 @@
         img {
           width: 607px;
           height: 661px;
+          @media (max-width: 1360px) {
+            width: 516px;
+            height: 562px;
+          }
+          @media (max-width: 1110px) {
+            width: 439px;
+            height: 478px;
+          }
         }
       }
       #addInfo {
@@ -166,6 +174,18 @@
           gap: 10px;
           background-color: #fff;
           border: #ebe8f4 1px solid;
+          @media (max-width: 1110px) {
+            background-image: url("../img/heart.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #f9f9f9;
+            border: none;
+          }
+          p {
+            @media (max-width: 1110px) {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -177,139 +197,6 @@
       display: flex;
       justify-content: center;
       margin-bottom: 25px;
-    }
-    .slider__item-content {
-      text-align: center;
-      .item {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        padding-bottom: 50px;
-        div {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-      }
-      button {
-        padding: 16px 32px;
-        width: 175px;
-        background-color: #f4f3f3;
-        border: none;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
-        margin-bottom: 40px;
-      }
-    }
-    #plusesOfBrand {
-      padding-top: 80px;
-      padding-bottom: 82px;
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-      text-align: center;
-      h2 {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 140%;
-      }
-      #plusBoxes {
-        display: flex;
-        justify-content: center;
-        gap: 22px;
-        .box {
-          width: 209px;
-          text-align: left;
-          background-color: #f9f9f9;
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          padding: 48px;
-          img {
-            height: 24px;
-            width: 24px;
-          }
-          h3 {
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 140%;
-          }
-          p {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 150%;
-          }
-        }
-      }
-    }
-    #clubJoin {
-      color: #fff;
-      padding: 97px 473px 86px 473px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      justify-content: center;
-      background-image: url("../img/clubBg.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      align-items: center;
-      #clubInfo {
-        width: 494px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        #clubText {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          h2 {
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 140%;
-          }
-          p {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 150%;
-          }
-        }
-        #benefits {
-          display: flex;
-          justify-content: center;
-          gap: 36px;
-          div {
-            display: flex;
-            gap: 8px;
-            img {
-              width: 16px;
-            }
-          }
-        }
-      }
-      #email {
-        display: flex;
-        input {
-          display: flex;
-          padding: 17px 205px 17px 32px;
-          align-items: center;
-          flex: 1 0 0;
-          align-self: stretch;
-          color: #f9f9f9;
-        }
-        button {
-          display: flex;
-          padding: 16px 32px;
-          align-items: flex-start;
-          gap: 10px;
-          background-color: #2a254b;
-          color: #fff;
-          border: none;
-        }
-      }
-    }
+    }   
   }
 }

@@ -50,6 +50,15 @@ footer {
       @media (max-width: 1580px) {
         margin-left: 150px;
       }
+      @media (max-width: 1274px) {
+        margin-left: 110px;
+      }
+      @media (max-width: 1113px) {
+        margin-left: 70px;
+      }
+      @media (min-width: 2000px) {
+        margin-right: 100px;
+      }
       h3 {
         font-size: 16px;
         font-weight: 400;
@@ -67,6 +76,9 @@ footer {
           color: #fff;
           @media (max-width: 1580px) {
             width: 244px;
+          }
+          @media (max-width: 1073px) {
+            width: 180px;
           }
         }
         button {
