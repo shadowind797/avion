@@ -20,7 +20,6 @@ class Cart extends React.Component {
       .then((response) => {
         const data = response.data;
         try {
-          console.log(data);
           this.setState({ cartItems: data });
         } catch (parseError) {
           console.error("Error parsing JSON:", parseError.message);

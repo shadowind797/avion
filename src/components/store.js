@@ -87,8 +87,7 @@ class Store extends React.Component {
       });
 
       const data = response.data;
-      console.log(data)
-      this.setState({jsonItems: data})
+      this.setState({ jsonItems: data });
       return data;
     } catch (error) {
       console.error("Ошибка при выполнении GET-запроса:", error.message);
