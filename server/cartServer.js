@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
@@ -12,7 +11,7 @@ const UPDATE_JSON_ENDPOINT = "/api/update_cart_items";
 
 const server = express();
 
-server.use(cors());
+server.use(express.json({limit: '500mb'}));
 
 const rawParser = bodyParser.raw({ type: "*/*" });
 server.post(UPDATE_JSON_ENDPOINT, rawParser, (req, res) => {

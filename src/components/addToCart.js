@@ -5,7 +5,6 @@ import axios from "axios";
 import Header from "./header";
 import Footer from "./footer";
 import Slider from "./slider";
-import Store from "./store";
 import Item from "./item";
 import delivery from "../img/Delivery.svg";
 import checkmark from "../img/Checkmark-outline.svg";
@@ -36,9 +35,6 @@ class AddToCart extends React.Component {
       jsonItems: [],
       removeBtn: false,
     };
-
-    this.removeProduct = this.removeProduct.bind(this);
-    this.addProduct = this.addProduct.bind(this);
   }
 
   componentDidMount() {
@@ -49,7 +45,6 @@ class AddToCart extends React.Component {
         const data = response.data;
         try {
           this.setState({ jsonItems: data });
-          console.log(data);
         } catch (parseError) {
           console.error("Error parsing JSON:", parseError.message);
         }
@@ -145,26 +140,25 @@ class AddToCart extends React.Component {
 
   addProduct = () => {
     this.setState((prevState) => ({ quantity: prevState.quantity + 1 }));
-  }
+  };
 
   removeProduct = () => {
     if (this.state.quantity > 1) {
       this.setState((prevState) => ({ quantity: prevState.quantity - 1 }));
     }
-  }
+  };
 
   checkInCart(itemId) {
     return this.state.cartItems.some((item) => item.id === itemId);
   }
 
   render() {
-    const { itemId, jsonItems, removeBtn } = this.state;
-
+    const { itemId, jsonItems, removeBtn, quantity } = this.state;
     const firstFourItems = jsonItems.slice(0, 4);
     const item = jsonItems.find((i) => i.id == itemId);
 
     if (jsonItems.length > 1) {
-      const { id, img, name, cost, description, dimensions, quantity } = item;
+      const { id, img, name, cost, description, dimensions } = item;
       const cartItem = {
         id: itemId,
         name: name,
@@ -210,17 +204,29 @@ class AddToCart extends React.Component {
                 <div id="addQuant">
                   <h3>Quantity</h3>
                   <div id="calc">
-                    <button id="minus" onClick={this.removeProduct}></button>
+                    <button
+                      id="minus"
+                      onClick={() => {
+                        this.removeProduct();
+                      }}
+                    ></button>
                     <div>
                       <p>{quantity}</p>
                     </div>
-                    <button id="plus" onClick={this.addProduct}></button>
+                    <button
+                      id="plus"
+                      onClick={() => {
+                        this.addProduct();
+                      }}
+                    ></button>
                   </div>
                 </div>
                 <div id="add">
                   <button
                     id="addBtn"
-                    onClick={this.pushInCart(cartItem)}
+                    onClick={() => {
+                      this.pushInCart(cartItem);
+                    }}
                     style={
                       !this.checkInCart(itemId)
                         ? { display: "block" }
@@ -385,6 +391,9 @@ class AddToCart extends React.Component {
           <Footer />
         </div>
       );
+    }
+    else {
+      return (<p>Loading</p>)
     }
   }
 }
