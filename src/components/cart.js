@@ -32,8 +32,6 @@ class Cart extends React.Component {
   render() {
     const { cartItems } = this.state;
 
-    console.log(cartItems)
-
     const total = cartItems.reduce(
       (sum, product) => sum + product.cost * product.quantity,
       0

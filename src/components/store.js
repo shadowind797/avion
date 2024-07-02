@@ -79,7 +79,7 @@ class Store extends React.Component {
 
   async fetchData() {
     try {
-      const serverUrl = "http://localhost:3002/api/items";
+      const serverUrl = "http://localhost:3001/api/items";
       const response = await axios.get(`${serverUrl}`, {
         params: {
           text: this.props.search,

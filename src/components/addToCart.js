@@ -38,7 +38,7 @@ class AddToCart extends React.Component {
   }
 
   componentDidMount() {
-    const serverUrl1 = "http://localhost:3002/api/items";
+    const serverUrl1 = "http://localhost:3001/api/items";
     axios
       .get(serverUrl1)
       .then((response) => {
