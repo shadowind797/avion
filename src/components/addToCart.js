@@ -269,8 +269,8 @@ class AddToCart extends React.Component {
             <div
               className="slider_style"
               data-slider="chiefslider"
-              data-infinite="false"
-              data-autoplay="false"
+              data-infinite="true"
+              data-autoplay="true"
               id="slider"
             >
               <div className="slider__container">

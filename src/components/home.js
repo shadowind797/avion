@@ -21,7 +21,7 @@ class Home extends React.Component {
   }
   async componentDidMount() {
     try {
-      const serverUrl = "http://localhost:3002/api/items";
+      const serverUrl = "http://localhost:3001/api/items";
       const response = await axios.get(serverUrl, {
         params: {
           text: this.props.search,
@@ -29,7 +29,6 @@ class Home extends React.Component {
       });
 
       const data = response.data;
-      console.log(data);
       this.setState({ jsonItems: data });
     } catch (error) {
       console.error("Ошибка при выполнении GET-запроса:", error.message);
