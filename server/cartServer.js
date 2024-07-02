@@ -5,9 +5,7 @@ const path = require("path");
 const fs = require("fs");
 
 const DEFAULT_PORT = 3001;
-
 const UPDATE_JSON_FILE = path.join(__dirname, "./json/cart.json");
-
 const UPDATE_JSON_ENDPOINT = "/api/update_cart_items";
 
 const server = express();

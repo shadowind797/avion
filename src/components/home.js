@@ -35,8 +35,6 @@ class Home extends React.Component {
       console.error("Ошибка при выполнении GET-запроса:", error.message);
       throw error;
     }
-  }
-  componentDidMount() {
     const $slider = document.getElementById("slider");
     if ($slider) {
       const slider = new Slider($slider, {
@@ -49,6 +47,7 @@ class Home extends React.Component {
       });
     }
   }
+
   render() {
     const { jsonItems } = this.state;
     const firstFourItems = jsonItems.slice(0, 4);
