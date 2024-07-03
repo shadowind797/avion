@@ -16,7 +16,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/store" element={<Store />} />
-          <Route exact path="/addtocart/:itemId" element={<AddToCart />} />
+          <Route exact path="/:addStr/:itemId" element={<AddToCart />} />
           <Route exact path="/altaddtocart/:itemId" element={<AltAdd />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/store/search/:search" element={<Search />} />

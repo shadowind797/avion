@@ -33,39 +33,24 @@ class AddToCart extends React.Component {
       cartItems: [],
       jsonItems: [],
       removeBtn: false,
+      addStr: this.props.params.addStr,
     };
   }
 
-  componentDidMount() {
-    const serverUrl1 = "http://localhost:3001/api/items";
-    axios
-      .get(serverUrl1)
-      .then((response) => {
-        const data = response.data;
-        try {
-          this.setState({ jsonItems: data });
-        } catch (parseError) {
-          console.error("Error parsing JSON:", parseError.message);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error.message);
-      });
+  async componentDidMount() {
+    try {
+      const [itemsResponse, cartItemsResponse] = await Promise.all([
+        axios.get("http://localhost:3001/api/items"),
+        axios.get("http://localhost:3001/api/update_cart_items"),
+      ]);
 
-    const serverUrl2 = "http://localhost:3001/api/update_cart_items";
-    axios
-      .get(serverUrl2)
-      .then((response) => {
-        const data = response.data;
-        try {
-          this.setState({ cartItems: data });
-        } catch (parseError) {
-          console.error("Error parsing JSON:", parseError.message);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error.message);
+      this.setState({
+        jsonItems: itemsResponse.data,
+        cartItems: cartItemsResponse.data,
       });
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+    }
   }
 
   setImg(img) {
@@ -140,22 +125,23 @@ class AddToCart extends React.Component {
   }
 
   render() {
-    const $slider = document.getElementById("slider");
-    if ($slider) {
-      const slider = new Slider($slider, {
-        loop: true,
-        autoplay: true,
-        interval: 10000, //ms
-        pauseOnHover: true,
-        refresh: true,
-        swipe: true,
-      });
-    }
-    const { itemId, jsonItems, removeBtn, quantity } = this.state;
+    
+    const { itemId, jsonItems, removeBtn, quantity, addStr } = this.state;
     const firstFourItems = jsonItems.slice(0, 4);
     const item = jsonItems.find((i) => i.id == itemId);
 
     if (jsonItems.length > 1) {
+      const $slider = document.getElementById("slider");
+      if ($slider) {
+        new Slider($slider, {
+          loop: true,
+          autoplay: true,
+          interval: 10000, //ms
+          pauseOnHover: true,
+          refresh: true,
+          swipe: true,
+        });
+      }
       const { id, img, name, cost, description, dimensions } = item;
       const cartItem = {
         id: itemId,
@@ -268,7 +254,7 @@ class AddToCart extends React.Component {
               className="slider_style"
               data-slider="chiefslider"
               data-infinite="true"
-              data-autoplay="true"
+              data-autoplay="false"
               id="slider"
             >
               <div className="slider__container">
@@ -278,11 +264,23 @@ class AddToCart extends React.Component {
                       <div className="slider__item-container">
                         <div className="slider__item-content">
                           <div>
-                            {firstFourItems.map((item) => (
-                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
-                                <Item key={item.id} item={item} />
-                              </NavLink>
-                            ))}
+                            {addStr === "addtocart"
+                              ? firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/altaddtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))
+                              : firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/addtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))}
                           </div>
                           <button>View collection</button>
                         </div>
@@ -292,11 +290,23 @@ class AddToCart extends React.Component {
                       <div className="slider__item-container">
                         <div className="slider__item-content">
                           <div>
-                            {firstFourItems.map((item) => (
-                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
-                                <Item key={item.id} item={item} />
-                              </NavLink>
-                            ))}
+                            {addStr === "addtocart"
+                              ? firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/altaddtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))
+                              : firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/addtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))}
                           </div>
                           <button>View collection</button>
                         </div>
@@ -306,11 +316,23 @@ class AddToCart extends React.Component {
                       <div className="slider__item-container">
                         <div className="slider__item-content">
                           <div>
-                            {firstFourItems.map((item) => (
-                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
-                                <Item key={item.id} item={item} />
-                              </NavLink>
-                            ))}
+                            {addStr === "addtocart"
+                              ? firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/altaddtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))
+                              : firstFourItems.map((item) => (
+                                  <NavLink
+                                    key={item.id}
+                                    to={`/addtocart/${item.id}`}
+                                  >
+                                    <Item key={item.id} item={item} />
+                                  </NavLink>
+                                ))}
                           </div>
                           <button>View collection</button>
                         </div>
