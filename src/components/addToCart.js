@@ -1,6 +1,5 @@
 import React, { useState, useRef, Component } from "react";
-import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import axios from "axios";
 import Header from "./header";
 import Footer from "./footer";
@@ -67,18 +66,6 @@ class AddToCart extends React.Component {
       .catch((error) => {
         console.error("Error fetching data:", error.message);
       });
-
-    const $slider = document.getElementById("slider");
-    if ($slider) {
-      const slider = new Slider($slider, {
-        loop: true,
-        autoplay: true,
-        interval: 10000, //ms
-        pauseOnHover: true,
-        refresh: true,
-        swipe: true,
-      });
-    }
   }
 
   setImg(img) {
@@ -153,6 +140,17 @@ class AddToCart extends React.Component {
   }
 
   render() {
+    const $slider = document.getElementById("slider");
+    if ($slider) {
+      const slider = new Slider($slider, {
+        loop: true,
+        autoplay: true,
+        interval: 10000, //ms
+        pauseOnHover: true,
+        refresh: true,
+        swipe: true,
+      });
+    }
     const { itemId, jsonItems, removeBtn, quantity } = this.state;
     const firstFourItems = jsonItems.slice(0, 4);
     const item = jsonItems.find((i) => i.id == itemId);
@@ -281,9 +279,9 @@ class AddToCart extends React.Component {
                         <div className="slider__item-content">
                           <div>
                             {firstFourItems.map((item) => (
-                              <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
                                 <Item key={item.id} item={item} />
-                              </Link>
+                              </NavLink>
                             ))}
                           </div>
                           <button>View collection</button>
@@ -295,9 +293,9 @@ class AddToCart extends React.Component {
                         <div className="slider__item-content">
                           <div>
                             {firstFourItems.map((item) => (
-                              <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
                                 <Item key={item.id} item={item} />
-                              </Link>
+                              </NavLink>
                             ))}
                           </div>
                           <button>View collection</button>
@@ -309,9 +307,9 @@ class AddToCart extends React.Component {
                         <div className="slider__item-content">
                           <div>
                             {firstFourItems.map((item) => (
-                              <Link key={item.id} to={`/addtocart/${item.id}`}>
+                              <NavLink key={item.id} to={`/altaddtocart/${item.id}`}>
                                 <Item key={item.id} item={item} />
-                              </Link>
+                              </NavLink>
                             ))}
                           </div>
                           <button>View collection</button>
@@ -391,9 +389,8 @@ class AddToCart extends React.Component {
           <Footer />
         </div>
       );
-    }
-    else {
-      return (<p>Loading</p>)
+    } else {
+      return <p>Loading</p>;
     }
   }
 }
