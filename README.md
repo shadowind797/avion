@@ -1,4 +1,4 @@
-# Avion Project V1.1.7
+# Avion Project V1.2.4
 
 ## Made by shadowind in 2024
 
@@ -8,8 +8,8 @@
 
     1. Download and extract project source code
 
-    2.  Extract 'Avion-V1.1.7.NPM_Server_Version' archive in yours project main folder.
+    2. Extract 'Avion-V1.1.7.NPM_Server_Version' archive in yours project main folder.
 
     3. Run 'npm run start' in terminal
 
-    4. If you want to save your items in cart also run 'node src/server/server.js' in terminal
+    4. Run 'node server/server.js' in terminal
