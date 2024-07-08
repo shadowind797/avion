@@ -133,7 +133,9 @@
       #add {
         display: flex;
         gap: 16px;
-        #addBtn, #inCartBtn, #removeBtn {
+        #addBtn,
+        #inCartBtn,
+        #removeBtn {
           display: flex;
           padding: 16px 32px;
           justify-content: center;
@@ -189,6 +191,33 @@
         }
       }
     }
+    #alsoBuy {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      overflow-x: auto;
+      max-width: 1280px;
+      margin: auto;
+      user-select: none;
+      &::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0;
+        display: none !important;
+        background: transparent;
+      }
+      .item {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 50px;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
     h2 {
       font-size: 32px;
       font-weight: 400;
@@ -197,6 +226,6 @@
       display: flex;
       justify-content: center;
       margin-bottom: 25px;
-    }   
+    }
   }
 }

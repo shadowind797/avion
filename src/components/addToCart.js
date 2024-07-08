@@ -1,5 +1,5 @@
 import React, { useState, useRef, Component } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Header from "./header";
 import Footer from "./footer";
@@ -125,23 +125,11 @@ class AddToCart extends React.Component {
   }
 
   render() {
-    
     const { itemId, jsonItems, removeBtn, quantity, addStr } = this.state;
-    const firstFourItems = jsonItems.slice(0, 4);
+    const firstFourItems = jsonItems.slice(0, 10);
     const item = jsonItems.find((i) => i.id == itemId);
 
     if (jsonItems.length > 1) {
-      const $slider = document.getElementById("slider");
-      if ($slider) {
-        new Slider($slider, {
-          loop: true,
-          autoplay: true,
-          interval: 10000, //ms
-          pauseOnHover: true,
-          refresh: true,
-          swipe: true,
-        });
-      }
       const { id, img, name, cost, description, dimensions } = item;
       const cartItem = {
         id: itemId,
@@ -250,97 +238,18 @@ class AddToCart extends React.Component {
               </div>
             </div>
             <h2>You might also love these</h2>
-            <div
-              className="slider_style"
-              data-slider="chiefslider"
-              data-infinite="true"
-              data-autoplay="false"
-              id="slider"
-            >
-              <div className="slider__container">
-                <div className="slider__wrapper">
-                  <div className="slider__items">
-                    <div className="slider__item">
-                      <div className="slider__item-container">
-                        <div className="slider__item-content">
-                          <div>
-                            {addStr === "addtocart"
-                              ? firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/altaddtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))
-                              : firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/addtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))}
-                          </div>
-                          <button>View collection</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="slider__item">
-                      <div className="slider__item-container">
-                        <div className="slider__item-content">
-                          <div>
-                            {addStr === "addtocart"
-                              ? firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/altaddtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))
-                              : firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/addtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))}
-                          </div>
-                          <button>View collection</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="slider__item">
-                      <div className="slider__item-container">
-                        <div className="slider__item-content">
-                          <div>
-                            {addStr === "addtocart"
-                              ? firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/altaddtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))
-                              : firstFourItems.map((item) => (
-                                  <NavLink
-                                    key={item.id}
-                                    to={`/addtocart/${item.id}`}
-                                  >
-                                    <Item key={item.id} item={item} />
-                                  </NavLink>
-                                ))}
-                          </div>
-                          <button>View collection</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div id="alsoBuy">
+              {addStr === "addtocart"
+                ? firstFourItems.map((item) => (
+                    <Link key={item.id} to={`/altaddtocart/${item.id}`}>
+                      <Item key={item.id} item={item} />
+                    </Link>
+                  ))
+                : firstFourItems.map((item) => (
+                    <Link key={item.id} to={`/addtocart/${item.id}`}>
+                      <Item key={item.id} item={item} />
+                    </Link>
+                  ))}
             </div>
             <div id="plusesOfBrand">
               <h2>What makes our brand different</h2>

@@ -1178,7 +1178,9 @@ textarea {
   display: flex;
   gap: 16px;
 }
-#addtocart main #cartadd #add #addBtn, #addtocart main #cartadd #add #inCartBtn, #addtocart main #cartadd #add #removeBtn {
+#addtocart main #cartadd #add #addBtn,
+#addtocart main #cartadd #add #inCartBtn,
+#addtocart main #cartadd #add #removeBtn {
   display: flex;
   padding: 16px 32px;
   justify-content: center;
@@ -1233,6 +1235,35 @@ textarea {
   #addtocart main #cartadd #add #favSaveBtn p {
     display: none;
   }
+}
+#addtocart main #alsoBuy {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 1280px;
+  margin: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#addtocart main #alsoBuy::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0;
+  display: none !important;
+  background: transparent;
+}
+#addtocart main #alsoBuy .item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+}
+#addtocart main #alsoBuy .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 #addtocart main h2 {
   font-size: 32px;
@@ -1782,6 +1813,7 @@ a:hover {
   flex-direction: column;
   gap: 24px;
   padding-bottom: 50px;
+  width: 305px;
   cursor: pointer;
 }
 @media (max-width: 1580px) {
