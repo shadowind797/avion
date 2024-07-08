@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
@@ -15,7 +15,7 @@ const ITEMS_ENDPOINT = "/api/items";
 const server = express();
 
 server.use(cors());
-server.use(express.json({limit: '500mb'}));
+server.use(express.json({ limit: "500mb" }));
 
 const rawParser = bodyParser.raw({ type: "*/*" });
 server.post(UPDATE_JSON_ENDPOINT, rawParser, (req, res) => {
@@ -57,10 +57,41 @@ server.get(ITEMS_ENDPOINT, (req, res) => {
           const thirdSearched = items.filter((item) =>
             item.name.toLowerCase().includes(text.split(" ")[1])
           );
-
-          if (searched.length === 0) {
+          const searchLVL1 = text.split(" ")[1];
+          if (searched.length === 0 && !searchLVL1.includes(" ")) {
             const afterSearch = thirdSearched;
             res.status(200).json(afterSearch);
+          } else if (moreSearched.length === 0 && thirdSearched.length === 0) {
+            const searchLVL1 = text.split(" ")[1];
+            if (searchLVL1.includes(" ")) {
+              const searchedLVL1 = items.filter((item) =>
+                item.name.toLowerCase().includes(searchLVL1.split(" ")[0])
+              );
+              const moreSearchedLVL1 = searchedLVL1.filter((item) =>
+                item.name.toLowerCase().includes(searchLVL1.split(" ")[1])
+              );
+              const thirdSearchedLVL1 = items.filter((item) =>
+                item.name.toLowerCase().includes(searchLVL1.split(" ")[1])
+              );
+              if (searchedLVL1.length === 0 && thirdSearchedLVL1.length === 0) {
+                if (moreSearched.length === 0) {
+                  const afterSearch = searched;
+                  res.status(200).json(afterSearch);
+                } else {
+                  const afterSearch = moreSearched;
+                  res.status(200).json(afterSearch);
+                }
+              } else if (moreSearchedLVL1.length === 0) {
+                const afterSearch = searchedLVL1;
+                res.status(200).json(afterSearch);
+              } else {
+                const afterSearch = moreSearchedLVL1;
+                res.status(200).json(afterSearch);
+              }
+            } else {
+              const afterSearch = searched;
+              res.status(200).json(afterSearch);
+            }
           } else if (moreSearched.length === 0) {
             const afterSearch = searched;
             res.status(200).json(afterSearch);
